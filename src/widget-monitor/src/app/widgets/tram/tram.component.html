@@ -1,1 +1,13 @@
-<div class="wrapper-tram"></div>
+<div class="wrapper-tram">
+  <div class="tram-stops" *ngFor="let stop of stops">
+    <div class="stop-name">{{stop.name}}</div>
+    <div class="stop-cards">
+      <div class="stop-opportunities" *ngFor="let opportunity of stop.monitor">
+          <div class="opp-line">{{opportunity.line}}</div>
+          <div class="opp-direction">{{opportunity.direction}}</div>
+          <div class="opp-time">{{opportunity.arrivalTime | date:'H:mm'}}</div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</div>

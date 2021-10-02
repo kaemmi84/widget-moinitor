@@ -1,5 +1,41 @@
+@import "src/style/variable";
+
 .wrapper-tram {
   width: 100%;
   height: 100%;
-  background: green;
+  background: $secondary;
+  color: $primary;
+
+
+  .tram-stops {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+
+    .stop-name {
+      background: $primary;
+      color: $secondary;
+      width: 100%;
+      padding-left: 1em;
+    }
+
+    .stop-cards {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      .stop-opportunities {
+        .opp-line {
+          font-size: 1.5em;
+        }
+
+        .opp-time {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
 }
+
+

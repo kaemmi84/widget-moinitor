@@ -1,0 +1,14 @@
+{
+  "tram": {
+    "stops": [
+      {
+        "id": "33000044",
+        "name": "Gabelsbergerstr."
+      },
+      {
+        "id": "33000043",
+        "name": "Blasewitzer / Fetscherstr."
+      }
+    ]
+  }
+}

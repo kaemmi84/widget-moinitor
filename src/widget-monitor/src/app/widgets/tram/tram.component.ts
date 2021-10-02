@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import * as dvb from "dvbjs";
+import {AppConfig} from "../../app-config";
+import {Stop} from "./interfaces/dvb";
 
 @Component({
   selector: 'app-tram',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TramComponent implements OnInit {
 
+  @Input() stops: Stop[] = [];
+  @Input() timeOffset = 0;
+  @Input() numberOfOpportunities = 4;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

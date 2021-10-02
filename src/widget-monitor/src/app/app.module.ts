@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,12 @@ import { TramComponent } from './widgets/tram/tram.component';
 import { ClockComponent } from './widgets/clock/clock.component';
 import { StockComponent } from './widgets/stock/stock.component';
 import { WeatherComponent } from './widgets/weather/weather.component';
+import {AppConfig} from "./app-config";
+import {HttpClientModule} from "@angular/common/http";
 
+export function initializeApp(appConfig: AppConfig) {
+  return () => appConfig.load();
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +26,14 @@ import { WeatherComponent } from './widgets/weather/weather.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AppConfig,
+    { provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [AppConfig], multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
