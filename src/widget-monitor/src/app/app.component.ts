@@ -41,6 +41,10 @@ export class AppComponent implements OnInit, OnDestroy{
         if (kaditz) {
           kaditz.direction = "Kaditz";
         }
+        let bischofswerda = (monitor as IMonitor[]).find((m: IMonitor) => m.direction === "Bischofswerda Bahnhof");
+        if (bischofswerda) {
+          bischofswerda.direction = "Bischofswerda";
+        }
 
         this.stops.push({
           name: AppConfig.settings.tram.stops[index].name,

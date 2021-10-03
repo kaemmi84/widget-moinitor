@@ -1,5 +1,39 @@
+@import "src/style/variable";
+
 .wrapper-weather {
   width: 100%;
   height: 100%;
-  background: blue;
+  background: $primary;
+  color: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+
+  .weather-current {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -40px;
+
+    .weather-current-temperature {
+      font-size: 9em;
+    }
+
+    .weather-current-temp-high-low {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+
+  .weather-forecast {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .weather-forecast-temperature {
+      font-size: 1.5em;
+    }
+  }
 }
