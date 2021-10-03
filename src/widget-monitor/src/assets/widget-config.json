@@ -17,6 +17,8 @@
     "longitude": 13.7372621
   },
   "stock": {
-    "symbol": "NDAQ"
+    "symbol": "NDAQ",
+    "interval": "1d",
+    "range": "1mo"
   }
 }

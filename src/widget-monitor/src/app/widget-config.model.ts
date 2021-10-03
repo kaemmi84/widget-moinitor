@@ -11,6 +11,8 @@ export interface WidgetConfig {
     longitude: number
   }
   stock: {
-    symbol: string
+    symbol: string,
+    interval: string,
+    range: string
   }
 }

@@ -12,6 +12,8 @@ import {timer} from "rxjs";
 export class StockComponent implements OnInit {
 
   @Input() symbol: string = 'NDAQ'
+  @Input() interval: string = '1d'
+  @Input() range: string = '1mo'
 
   // Array of different segments in chart
   lineChartData: ChartDataSets[] = [
@@ -76,15 +78,15 @@ export class StockComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    timer(0,60000).subscribe(() => this.getStock());
+    timer(0,1800000).subscribe(() => this.getStock());
   }
 
   private getStock() {
-    this.stockService.getSpark(this.symbol).subscribe((result: any) => {
-      result[this.symbol].timestamp.forEach((time: number) => {
+    this.stockService.getSpark(this.symbol, this.interval, this.range).subscribe((result: any) => {
+      result[this.symbol.trim()].timestamp.forEach((time: number) => {
         this.lineChartLabels.push(time.toString());
       })
-      result[this.symbol].close.forEach((curse: number) => {
+      result[this.symbol.trim()].close.forEach((curse: number) => {
         this.lineChartData[0]?.data?.push(curse);
       })
     })

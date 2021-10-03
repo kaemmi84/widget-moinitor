@@ -13,7 +13,7 @@ export class StockService {
     private http: HttpClient
   ) { }
 
-  getSpark(symbols: string) {
+  getSpark(symbols: string, interval = '1d', range = '1mo') {
     return this.http.get(
       `${this.api}/v8/finance/spark`,
       {
@@ -21,7 +21,9 @@ export class StockService {
           'x-api-key': environment.yahooApiKey
         },
         params: {
-          symbols: symbols
+          symbols: symbols,
+          interval: interval,
+          range: range
         }
       });
   }

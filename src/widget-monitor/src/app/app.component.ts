@@ -18,6 +18,9 @@ export class AppComponent implements OnInit, OnDestroy{
   public latitude: number = 0;
   public longitude: number = 0;
   public symbol: string = 'NDAQ';
+  public interval: string = '1d';
+  public range: string = '1mo';
+
   public subscription: Subscription = new Subscription();
 
   ngOnInit(): void {
@@ -28,6 +31,8 @@ export class AppComponent implements OnInit, OnDestroy{
     this.latitude = AppConfig.settings.weather.latitude;
     this.longitude = AppConfig.settings.weather.longitude;
     this.symbol = AppConfig.settings.stock.symbol;
+    this.interval = AppConfig.settings.stock.interval;
+    this.range = AppConfig.settings.stock.range;
   }
 
   ngOnDestroy(): void {
