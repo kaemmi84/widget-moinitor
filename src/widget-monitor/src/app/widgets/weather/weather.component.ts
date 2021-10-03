@@ -24,8 +24,6 @@ export class WeatherComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-
-
     this.weatherService.getForecastWeather(this.latitude, this.longitude)
       .subscribe((weather: any) => {
           this.currentTemperature = Math.round(weather.currently.temperature);
@@ -48,12 +46,7 @@ export class WeatherComponent implements OnInit, AfterViewInit {
                 temperature: Math.round(dailyWeather.temperatureHigh),
                 icon: dailyWeather.icon
               });
-
-
-            console.log('day:', new Date(dailyWeather.time));
           });
-
-          console.log('weather', weather)
         }
       );
   }

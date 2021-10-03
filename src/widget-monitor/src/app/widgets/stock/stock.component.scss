@@ -1,5 +1,11 @@
+@import "src/style/variable";
+
 .wrapper-stock {
   width: 100%;
   height: 100%;
-  background: red;
+  background: $secondary;
+  color: $primary;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

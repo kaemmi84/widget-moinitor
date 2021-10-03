@@ -15,13 +15,19 @@ export class AppComponent implements OnInit, OnDestroy{
   public stops: Stop[] = [];
   public timeOffset = 0;
   public numberOfOpportunities = 4;
-
+  public latitude: number = 0;
+  public longitude: number = 0;
+  public symbol: string = 'NDAQ';
   public subscription: Subscription = new Subscription();
 
   ngOnInit(): void {
-    this.subscription.add(
-      timer(0,60000).subscribe(() => this.setTramSetup())
-    )
+    timer(0,60000).subscribe(() => this.setTramSetup())
+
+    //setup settings
+    this.timeOffset = AppConfig.settings.tram.timeOffset;
+    this.latitude = AppConfig.settings.weather.latitude;
+    this.longitude = AppConfig.settings.weather.longitude;
+    this.symbol = AppConfig.settings.stock.symbol;
   }
 
   ngOnDestroy(): void {

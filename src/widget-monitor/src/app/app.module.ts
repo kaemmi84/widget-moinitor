@@ -11,6 +11,7 @@ import { StockComponent } from './widgets/stock/stock.component';
 import { WeatherComponent } from './widgets/weather/weather.component';
 import {AppConfig} from "./app-config";
 import {HttpClientModule} from "@angular/common/http";
+import {ChartsModule} from "ng2-charts";
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -27,7 +28,8 @@ export function initializeApp(appConfig: AppConfig) {
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [
     AppConfig,

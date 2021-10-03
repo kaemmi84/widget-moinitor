@@ -3,6 +3,14 @@ export interface WidgetConfig {
     stops: {
       id:string,
       name: string
-    }[]
+    }[],
+    timeOffset: number;
+  }
+  weather: {
+    latitude: number
+    longitude: number
+  }
+  stock: {
+    symbol: string
   }
 }

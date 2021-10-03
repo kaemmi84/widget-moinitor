@@ -1,1 +1,12 @@
-<div class="wrapper-stock"></div>
+<div class="wrapper-stock">
+  <canvas baseChart
+          height="202"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+  </canvas>
+</div>
