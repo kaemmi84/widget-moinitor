@@ -76,7 +76,7 @@ export class StockComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    timer(0,60000).subscribe(() => this.getStock())
+    timer(0,60000).subscribe(() => this.getStock());
   }
 
   private getStock() {

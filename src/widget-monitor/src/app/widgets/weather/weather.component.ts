@@ -1,13 +1,14 @@
 import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {WeatherService} from "./services/weather.service";
 import { Skycons } from 'skycons-ts';
+import {timer} from "rxjs";
 
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss']
 })
-export class WeatherComponent implements OnInit, AfterViewInit {
+export class WeatherComponent implements OnInit {
 
   @Input() latitude: number = 0;
   @Input() longitude: number = 0;
@@ -23,7 +24,10 @@ export class WeatherComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
+    timer(0,120000).subscribe(() => this.getWeather());
+  }
 
+  private getWeather() {
     this.weatherService.getForecastWeather(this.latitude, this.longitude)
       .subscribe((weather: any) => {
           this.currentTemperature = Math.round(weather.currently.temperature);
@@ -49,15 +53,12 @@ export class WeatherComponent implements OnInit, AfterViewInit {
           });
         }
       );
-  }
 
-  ngAfterViewInit(): void {
     setTimeout(() => {
       this.weekForecast.forEach((value, index) => {
-        this.skyCons.add(`iconForecast${index+1}`, value.icon);
+        this.skyCons.add(`iconForecast${index + 1}`, value.icon);
       })
       this.skyCons.play();
     }, 1000);
   }
-
 }
