@@ -32,6 +32,7 @@ export class WeatherComponent implements OnInit {
       .subscribe((weather: any) => {
           this.currentTemperature = Math.round(weather.currently.temperature);
           this.skyCons.add('iconCurrent', weather.currently.icon);
+          this.weekForecast = [];
           weather.daily.data.forEach((dailyWeather: any, index: number) => {
             if (index == 0) {
               this.dayHighTemperature = Math.round(dailyWeather.temperatureHigh);
