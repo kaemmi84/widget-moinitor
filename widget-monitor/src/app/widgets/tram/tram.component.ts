@@ -1,6 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import * as dvb from "dvbjs";
-import {AppConfig} from "../../app-config";
 import {Stop} from "./interfaces/dvb";
 
 @Component({

@@ -1,5 +1,3 @@
-import {monitor} from "dvbjs";
-
 export interface Stop {
   name: string,
   monitor: IMonitor[]

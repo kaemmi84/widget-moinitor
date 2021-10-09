@@ -47,21 +47,30 @@ export class AppComponent implements OnInit, OnDestroy{
     });
     Promise.all(promises).then(stops => {
       stops.forEach((monitor, index) => {
-        //workarout shorten of direction name
-        let kaditz = (monitor as IMonitor[]).find((m: IMonitor) => m.direction === "Kaditz, Am Vorwerksfeld");
-        if (kaditz) {
-          kaditz.direction = "Kaditz";
-        }
-        let bischofswerda = (monitor as IMonitor[]).find((m: IMonitor) => m.direction === "Bischofswerda Bahnhof");
-        if (bischofswerda) {
-          bischofswerda.direction = "Bischofswerda";
-        }
+        this.ShortDestinations(monitor, 'kaditz, am vorwerksfeld', 'Kaditz');
+        this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');
 
         this.stops.push({
           name: AppConfig.settings.tram.stops[index].name,
           monitor: monitor as IMonitor[]
         })
       })
+    });
+  }
+
+  /**
+   * workaround shorten of direction name
+   * @param monitor
+   * @param longName
+   * @param shortName
+   * @constructor
+   * @private
+   */
+  private ShortDestinations(monitor: any, longName: string, shortName:string) {
+    const destinations = (monitor as IMonitor[])
+      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim() === longName.toLowerCase().trim());
+    destinations.forEach(destination => {
+      destination.direction = shortName;
     });
   }
 }

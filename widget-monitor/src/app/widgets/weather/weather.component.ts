@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {WeatherService} from "./services/weather.service";
-import { Skycons } from 'skycons-ts';
+import {Skycons} from 'skycons-ts';
 import {timer} from "rxjs";
 
 @Component({
