@@ -900,7 +900,7 @@
                 "OnInit",
                 "OnDestroy"
             ],
-            "templateData": "<div class=\"wrapper-widgets\">\n  <app-tram\n    [stops]=\"stops\"\n    [timeOffset]=\"timeOffset\"\n    [numberOfOpportunities]=\"numberOfOpportunities\"></app-tram>\n  <app-weather\n    [latitude]=\"latitude\"\n    [longitude]=\"longitude\"\n  ></app-weather>\n  <app-clock></app-clock>\n  <app-stock\n    [symbol]=\"symbol\"\n    [interval]=\"interval\"\n    [range]=\"range\"\n  ></app-stock>\n</div>\n\n"
+            "templateData": "<div class=\"wrapper-widgets\">\n  <app-tram\n    [stops]=\"stops\"\n    [timeOffset]=\"timeOffset\"\n    [numberOfOpportunities]=\"numberOfOpportunities\"></app-tram>\n  <app-weather\n    [latitude]=\"latitude\"\n    [longitude]=\"longitude\"\n  ></app-weather>\n  <app-clock\n    [timeIsRunning]=\"true\"\n  ></app-clock>\n  <app-stock\n    [symbol]=\"symbol\"\n    [interval]=\"interval\"\n    [range]=\"range\"\n  ></app-stock>\n</div>\n\n"
         },
         {
             "name": "ButtonComponent",
@@ -1024,7 +1024,7 @@
         },
         {
             "name": "ClockComponent",
-            "id": "component-ClockComponent-240e872b10e87e0f7ca8873090f882d6",
+            "id": "component-ClockComponent-2902300924b0a8b241e661f337b9b454",
             "file": "src/app/widgets/clock/clock.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1040,7 +1040,18 @@
                 "./clock.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "timeIsRunning",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "The time is running",
+                    "description": "<p>The time is running</p>\n",
+                    "line": 22,
+                    "type": "boolean"
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [
                 {
@@ -1051,27 +1062,69 @@
                     "type": "Subscription",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 12
                 },
                 {
                     "name": "time",
                     "defaultValue": "new Date()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "Date",
                     "optional": false,
-                    "description": "",
-                    "line": 12
+                    "description": "<p>Time to show</p>\n",
+                    "line": 17,
+                    "rawdescription": "\n\nTime to show\n"
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "letTimeRunning",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "ngOnDestroy",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 28,
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1081,9 +1134,40 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 26,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "setTime",
+                    "args": [
+                        {
+                            "name": "time",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "time",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -1093,7 +1177,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, OnDestroy, OnInit} from '@angular/core';\nimport {Subscription, timer} from \"rxjs\";\nimport {map, share} from \"rxjs/operators\";\n\n@Component({\n  selector: 'app-clock',\n  templateUrl: './clock.component.html',\n  styleUrls: ['./clock.component.scss']\n})\nexport class ClockComponent implements OnInit, OnDestroy {\n\n  time = new Date();\n  subscription: Subscription = new Subscription();\n\n  constructor() { }\n\n  ngOnInit(): void {\n    this.subscription = timer(0, 1000)\n      .pipe(\n        map(() => new Date()),\n        share()\n      )\n      .subscribe(time => {\n        this.time = time;\n      });\n  }\n\n  ngOnDestroy(): void {\n    this.subscription.unsubscribe();\n  }\n\n}\n",
+            "sourceCode": "import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';\nimport {Subscription, timer} from \"rxjs\";\nimport {map, share} from \"rxjs/operators\";\n\n@Component({\n  selector: 'app-clock',\n  templateUrl: './clock.component.html',\n  styleUrls: ['./clock.component.scss']\n})\nexport class ClockComponent implements OnInit, OnDestroy, OnChanges {\n\n  subscription: Subscription = new Subscription();\n\n  /**\n   * Time to show\n   */\n  time: Date = new Date();\n\n  /**\n   * The time is running\n   */\n  @Input() timeIsRunning: boolean = true;\n\n  constructor() { }\n\n  ngOnInit(): void {\n    this.letTimeRunning()\n  }\n\n  private setTime(time: Date) {\n    this.time = time;\n  }\n\n  ngOnDestroy(): void {\n    this.subscription.unsubscribe();\n  }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    if (changes.timeIsRunning) {\n      this.letTimeRunning();\n    }\n  }\n\n  private letTimeRunning() {\n    this.subscription.unsubscribe();\n    if (this.timeIsRunning) {\n      this.subscription = timer(0, 1000)\n        .pipe(\n          map(() => new Date()),\n          share()\n        )\n        .subscribe(time => {\n          this.setTime(time);\n        });\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1108,11 +1192,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 13
+                "line": 22
             },
             "implements": [
                 "OnInit",
-                "OnDestroy"
+                "OnDestroy",
+                "OnChanges"
             ],
             "templateData": "<div class=\"wrapper-clock\">\n  <div class=\"time-clock\">\n    {{time | date:'H:mm:ss'}}\n  </div>\n</div>\n"
         },
@@ -1818,6 +1903,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Afternoon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Clock.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => {\n  return({\n    props: {\n      timeIsRunning: false,\n      time: new Date(2021, 10, 9, 15, 15, 15, 15)\n    }\n  })\n}"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1918,6 +2013,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Morning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Clock.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => {\n  return({\n    props: {\n      timeIsRunning: false,\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\n    },\n    parameter: {\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\n    }\n  })\n}"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1935,6 +2040,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "Running",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Clock.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Secondary",
@@ -1965,6 +2080,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Clock.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ClockComponent>",
+                "defaultValue": "(args: ClockComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2020,6 +2145,48 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/Clock.stories.ts": [
+                {
+                    "name": "Afternoon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Clock.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => {\n  return({\n    props: {\n      timeIsRunning: false,\n      time: new Date(2021, 10, 9, 15, 15, 15, 15)\n    }\n  })\n}"
+                },
+                {
+                    "name": "Morning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Clock.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => {\n  return({\n    props: {\n      timeIsRunning: false,\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\n    },\n    parameter: {\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\n    }\n  })\n}"
+                },
+                {
+                    "name": "Running",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Clock.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Clock.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ClockComponent>",
+                    "defaultValue": "(args: ClockComponent) => ({\n  props: args,\n})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -2301,8 +2468,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ClockComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coveragePercent": 20,
+                "coverageCount": "2/10",
                 "status": "low"
             },
             {
@@ -2477,6 +2644,46 @@
             },
             {
                 "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Clock.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Afternoon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Clock.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Morning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Clock.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Running",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Clock.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
