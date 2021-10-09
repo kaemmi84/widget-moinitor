@@ -21,224 +21,224 @@ Node.js version : v16.10.0
 
 Operating system : Windows 10
 
-[[90m13:46:10[39m] No configuration file found, switching to CLI flags.
-[[90m13:46:10[39m] Using tsconfig file : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.json
-[[90m13:46:10[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.browserslistrc
-[[90m13:46:10[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.gitignore
-[[90m13:46:10[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\angular.json
-[[90m13:46:10[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.editorconfig
-[[90m13:46:10[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\karma.conf.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\documentation.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\build-storybook.log
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\README.md
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\package-lock.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.app.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.spec.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\package.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\preview.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\main.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\tsconfig.json
-[[90m13:46:11[39m] Ignoring       : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\typings.d.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor.zip
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\favicon.ico
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\index.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\main.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\polyfills.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\styles.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\test.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\3rdpartylicenses.txt
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\favicon.ico
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\index.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\main.c3f2b11b03718c2b6105.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\polyfills.ec1f0a1eaf0ce99d651c.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\runtime.35c8b3a134bcce57601f.js
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\styles.9276688c8294e3b75f4a.css
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app-config.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app-routing.module.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.module.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widget-config.model.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\assets\.gitkeep
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\assets\widget-config.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.default.prod.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.default.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.prod.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\button.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\button.css
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Button.stories.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Clock.stories.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\header.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\header.css
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Header.stories.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Introduction.stories.mdx
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\page.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\page.css
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Page.stories.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\style\_variable.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\assets\widget-config.json
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\code-brackets.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\colors.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\comments.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\direction.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\flow.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\plugin.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\repo.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\stackalt.svg
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.html
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.scss
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\service\stock.service.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\interfaces\dvb.ts
-[[90m13:46:11[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\services\weather.service.ts
-[[90m13:46:11[39m] Searching package.json file
-[[90m13:46:11[39m] package.json file found
-[[90m13:46:11[39m] Processing package.json dependencies
-[[90m13:46:11[39m] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[[90m13:46:11[39m] README.md file found
-[[90m13:46:11[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\CHANGELOG read
-[[90m13:46:11[39m] Continuing without CHANGELOG.md file
-[[90m13:46:11[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\CONTRIBUTING read
-[[90m13:46:11[39m] Continuing without CONTRIBUTING.md file
-[[90m13:46:11[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\LICENSE read
-[[90m13:46:11[39m] Continuing without LICENSE.md file
-[[90m13:46:11[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\TODO read
-[[90m13:46:11[39m] Continuing without TODO.md file
-[[90m13:46:11[39m] Get dependencies data
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/main.ts
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/polyfills.ts
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/test.ts
-[[90m13:46:12[39m] found          : require
-[[90m13:46:12[39m] found          : context
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app-config.ts
-[[90m13:46:12[39m] found          : AppConfig
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app-routing.module.ts
-[[90m13:46:12[39m] Analysing routes definitions and clean them if necessary
-[[90m13:46:12[39m] found          : AppRoutingModule
-[[90m13:46:12[39m]                : - imports:
-[[90m13:46:12[39m]                : 	- RouterModule
-[[90m13:46:12[39m]                : - exports:
-[[90m13:46:12[39m]                : 	- RouterModule
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app.component.ts
-[[90m13:46:12[39m] found          : AppComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app.module.ts
-[[90m13:46:12[39m] found          : initializeApp
-[[90m13:46:12[39m] found          : AppModule
-[[90m13:46:12[39m]                : - imports:
-[[90m13:46:12[39m]                : 	- BrowserModule
-[[90m13:46:12[39m]                : 	- AppRoutingModule
-[[90m13:46:12[39m]                : 	- NgbModule
-[[90m13:46:12[39m]                : 	- HttpClientModule
-[[90m13:46:12[39m]                : 	- ChartsModule
-[[90m13:46:12[39m]                : - declarations:
-[[90m13:46:12[39m]                : 	- AppComponent
-[[90m13:46:12[39m]                : 	- TramComponent
-[[90m13:46:12[39m]                : 	- ClockComponent
-[[90m13:46:12[39m]                : 	- StockComponent
-[[90m13:46:12[39m]                : 	- WeatherComponent
-[[90m13:46:12[39m]                : - providers:
-[[90m13:46:12[39m]                : 	- AppConfig
-[[90m13:46:12[39m]                : 	- { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }
-[[90m13:46:12[39m]                : - bootstrap:
-[[90m13:46:12[39m]                : 	- AppComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widget-config.model.ts
-[[90m13:46:12[39m] found          : WidgetConfig
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.default.prod.ts
-[[90m13:46:12[39m] found          : environment
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.default.ts
-[[90m13:46:12[39m] found          : environmentDefault
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.prod.ts
-[[90m13:46:12[39m] found          : environment
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.ts
-[[90m13:46:12[39m] found          : environment
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/button.component.ts
-[[90m13:46:12[39m] found          : ButtonComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Button.stories.ts
-[[90m13:46:12[39m] found          : Template
-[[90m13:46:12[39m] found          : Primary
-[[90m13:46:12[39m] found          : Secondary
-[[90m13:46:12[39m] found          : Large
-[[90m13:46:12[39m] found          : Small
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Clock.stories.ts
-[[90m13:46:12[39m] found          : Morning
-[[90m13:46:12[39m] found          : Afternoon
-[[90m13:46:12[39m] found          : Template
-[[90m13:46:12[39m] found          : Running
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/header.component.ts
-[[90m13:46:12[39m] found          : HeaderComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Header.stories.ts
-[[90m13:46:12[39m] found          : Template
-[[90m13:46:12[39m] found          : LoggedIn
-[[90m13:46:12[39m] found          : LoggedOut
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/page.component.ts
-[[90m13:46:12[39m] found          : PageComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Page.stories.ts
-[[90m13:46:12[39m] found          : Template
-[[90m13:46:12[39m] found          : LoggedIn
-[[90m13:46:12[39m] found          : LoggedOut
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/clock/clock.component.ts
-[[90m13:46:12[39m] found          : ClockComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/stock/stock.component.ts
-[[90m13:46:12[39m] found          : StockComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/tram/tram.component.ts
-[[90m13:46:12[39m] found          : TramComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/weather/weather.component.ts
-[[90m13:46:12[39m] found          : WeatherComponent
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/stock/service/stock.service.ts
-[[90m13:46:12[39m] found          : StockService
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/tram/interfaces/dvb.ts
-[[90m13:46:12[39m] found          : Stop
-[[90m13:46:12[39m] found          : IMonitor
-[[90m13:46:12[39m] found          : IPlatform
-[[90m13:46:12[39m] found          : IMode
-[[90m13:46:12[39m] found          : IDiva
-[[90m13:46:12[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/weather/services/weather.service.ts
-[[90m13:46:12[39m] found          : WeatherService
-[[90m13:46:12[39m] -------------------
-[[90m13:46:12[39m] Project statistics 
-[[90m13:46:12[39m] - files      : 79
-[[90m13:46:12[39m] - module     : 2
-[[90m13:46:12[39m] - component  : 8
-[[90m13:46:12[39m] - injectable : 3
-[[90m13:46:12[39m] - interface  : 6
-[[90m13:46:12[39m] -------------------
-[[90m13:46:12[39m] Prepare components
-[[90m13:46:12[39m]  AppComponent has a templateUrl, include it
-[[90m13:46:12[39m]  AppComponent has styleUrls, include them
-[[90m13:46:12[39m]  ButtonComponent has styleUrls, include them
-[[90m13:46:12[39m]  ClockComponent has a templateUrl, include it
-[[90m13:46:12[39m]  ClockComponent has styleUrls, include them
-[[90m13:46:12[39m]  HeaderComponent has styleUrls, include them
-[[90m13:46:12[39m]  PageComponent has styleUrls, include them
-[[90m13:46:12[39m]  StockComponent has a templateUrl, include it
-[[90m13:46:12[39m]  StockComponent has styleUrls, include them
-[[90m13:46:12[39m]  TramComponent has a templateUrl, include it
-[[90m13:46:12[39m]  TramComponent has styleUrls, include them
-[[90m13:46:12[39m]  WeatherComponent has a templateUrl, include it
-[[90m13:46:12[39m]  WeatherComponent has styleUrls, include them
-[[90m13:46:12[39m] Prepare modules
-[[90m13:46:12[39m] Prepare injectables
-[[90m13:46:12[39m] Process routes
-[[90m13:46:12[39m] Prepare interfaces
-[[90m13:46:12[39m] Prepare miscellaneous
-[[90m13:46:12[39m] Process documentation coverage report
-[[90m13:46:12[39m] Generating documentation in export format json
-[[90m13:46:12[39m] Documentation generated in ./ in 2.507 seconds
+[[90m14:34:16[39m] No configuration file found, switching to CLI flags.
+[[90m14:34:16[39m] Using tsconfig file : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.browserslistrc
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.editorconfig
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\angular.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.gitignore
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\build-storybook.log
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\documentation.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\karma.conf.js
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\package.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\package-lock.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\README.md
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.app.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\tsconfig.spec.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\main.js
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\preview.js
+[[90m14:34:16[39m] Ignoring       : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\typings.d.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook\tsconfig.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor.zip
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\favicon.ico
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\index.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\main.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\polyfills.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\styles.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\test.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\3rdpartylicenses.txt
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\favicon.ico
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\index.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\main.c3f2b11b03718c2b6105.js
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\polyfills.ec1f0a1eaf0ce99d651c.js
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\runtime.35c8b3a134bcce57601f.js
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\styles.9276688c8294e3b75f4a.css
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app-config.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app-routing.module.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\app.module.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widget-config.model.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\assets\.gitkeep
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\assets\widget-config.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.default.prod.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.default.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.prod.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\environments\environment.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\button.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\button.css
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Button.stories.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Clock.stories.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\header.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\header.css
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Header.stories.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Introduction.stories.mdx
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\page.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\page.css
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\Page.stories.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\style\_variable.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\code-brackets.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\colors.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\comments.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\direction.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\flow.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\plugin.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\stackalt.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\stories\assets\repo.svg
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\dist\widget-monitor\assets\widget-config.json
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\clock\clock.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\stock.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\tram.component.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.html
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.scss
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\weather.component.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\stock\service\stock.service.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\tram\interfaces\dvb.ts
+[[90m14:34:16[39m] Including      : C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\src\app\widgets\weather\services\weather.service.ts
+[[90m14:34:16[39m] Searching package.json file
+[[90m14:34:16[39m] package.json file found
+[[90m14:34:16[39m] Processing package.json dependencies
+[[90m14:34:16[39m] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[[90m14:34:16[39m] README.md file found
+[[90m14:34:16[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\CHANGELOG read
+[[90m14:34:16[39m] Continuing without CHANGELOG.md file
+[[90m14:34:16[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\CONTRIBUTING read
+[[90m14:34:16[39m] Continuing without CONTRIBUTING.md file
+[[90m14:34:16[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\LICENSE read
+[[90m14:34:16[39m] Continuing without LICENSE.md file
+[[90m14:34:16[39m] Error during C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\TODO read
+[[90m14:34:16[39m] Continuing without TODO.md file
+[[90m14:34:16[39m] Get dependencies data
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/main.ts
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/polyfills.ts
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/test.ts
+[[90m14:34:17[39m] found          : require
+[[90m14:34:17[39m] found          : context
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app-config.ts
+[[90m14:34:17[39m] found          : AppConfig
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app-routing.module.ts
+[[90m14:34:17[39m] Analysing routes definitions and clean them if necessary
+[[90m14:34:17[39m] found          : AppRoutingModule
+[[90m14:34:17[39m]                : - imports:
+[[90m14:34:17[39m]                : 	- RouterModule
+[[90m14:34:17[39m]                : - exports:
+[[90m14:34:17[39m]                : 	- RouterModule
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app.component.ts
+[[90m14:34:17[39m] found          : AppComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/app.module.ts
+[[90m14:34:17[39m] found          : initializeApp
+[[90m14:34:17[39m] found          : AppModule
+[[90m14:34:17[39m]                : - imports:
+[[90m14:34:17[39m]                : 	- BrowserModule
+[[90m14:34:17[39m]                : 	- AppRoutingModule
+[[90m14:34:17[39m]                : 	- NgbModule
+[[90m14:34:17[39m]                : 	- HttpClientModule
+[[90m14:34:17[39m]                : 	- ChartsModule
+[[90m14:34:17[39m]                : - declarations:
+[[90m14:34:17[39m]                : 	- AppComponent
+[[90m14:34:17[39m]                : 	- TramComponent
+[[90m14:34:17[39m]                : 	- ClockComponent
+[[90m14:34:17[39m]                : 	- StockComponent
+[[90m14:34:17[39m]                : 	- WeatherComponent
+[[90m14:34:17[39m]                : - providers:
+[[90m14:34:17[39m]                : 	- AppConfig
+[[90m14:34:17[39m]                : 	- { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true }
+[[90m14:34:17[39m]                : - bootstrap:
+[[90m14:34:17[39m]                : 	- AppComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widget-config.model.ts
+[[90m14:34:17[39m] found          : WidgetConfig
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.default.prod.ts
+[[90m14:34:17[39m] found          : environment
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.default.ts
+[[90m14:34:17[39m] found          : environmentDefault
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.prod.ts
+[[90m14:34:17[39m] found          : environment
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/environments/environment.ts
+[[90m14:34:17[39m] found          : environment
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/button.component.ts
+[[90m14:34:17[39m] found          : ButtonComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Button.stories.ts
+[[90m14:34:17[39m] found          : Template
+[[90m14:34:17[39m] found          : Primary
+[[90m14:34:17[39m] found          : Secondary
+[[90m14:34:17[39m] found          : Large
+[[90m14:34:17[39m] found          : Small
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Clock.stories.ts
+[[90m14:34:17[39m] found          : Morning
+[[90m14:34:17[39m] found          : Afternoon
+[[90m14:34:17[39m] found          : Template
+[[90m14:34:17[39m] found          : Running
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/header.component.ts
+[[90m14:34:17[39m] found          : HeaderComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Header.stories.ts
+[[90m14:34:17[39m] found          : Template
+[[90m14:34:17[39m] found          : LoggedIn
+[[90m14:34:17[39m] found          : LoggedOut
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/page.component.ts
+[[90m14:34:17[39m] found          : PageComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/stories/Page.stories.ts
+[[90m14:34:17[39m] found          : Template
+[[90m14:34:17[39m] found          : LoggedIn
+[[90m14:34:17[39m] found          : LoggedOut
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/clock/clock.component.ts
+[[90m14:34:17[39m] found          : ClockComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/stock/stock.component.ts
+[[90m14:34:17[39m] found          : StockComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/tram/tram.component.ts
+[[90m14:34:17[39m] found          : TramComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/weather/weather.component.ts
+[[90m14:34:17[39m] found          : WeatherComponent
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/stock/service/stock.service.ts
+[[90m14:34:17[39m] found          : StockService
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/tram/interfaces/dvb.ts
+[[90m14:34:17[39m] found          : Stop
+[[90m14:34:17[39m] found          : IMonitor
+[[90m14:34:17[39m] found          : IPlatform
+[[90m14:34:17[39m] found          : IMode
+[[90m14:34:17[39m] found          : IDiva
+[[90m14:34:17[39m] parsing        : C:/Users/DISKAEMM/IdeaProjects/widget-moinitor/widget-monitor/src/app/widgets/weather/services/weather.service.ts
+[[90m14:34:17[39m] found          : WeatherService
+[[90m14:34:17[39m] -------------------
+[[90m14:34:17[39m] Project statistics 
+[[90m14:34:17[39m] - files      : 79
+[[90m14:34:17[39m] - module     : 2
+[[90m14:34:17[39m] - component  : 8
+[[90m14:34:17[39m] - injectable : 3
+[[90m14:34:17[39m] - interface  : 6
+[[90m14:34:17[39m] -------------------
+[[90m14:34:17[39m] Prepare components
+[[90m14:34:17[39m]  AppComponent has a templateUrl, include it
+[[90m14:34:17[39m]  AppComponent has styleUrls, include them
+[[90m14:34:17[39m]  ButtonComponent has styleUrls, include them
+[[90m14:34:17[39m]  ClockComponent has a templateUrl, include it
+[[90m14:34:17[39m]  ClockComponent has styleUrls, include them
+[[90m14:34:17[39m]  HeaderComponent has styleUrls, include them
+[[90m14:34:17[39m]  PageComponent has styleUrls, include them
+[[90m14:34:17[39m]  StockComponent has a templateUrl, include it
+[[90m14:34:17[39m]  StockComponent has styleUrls, include them
+[[90m14:34:17[39m]  TramComponent has a templateUrl, include it
+[[90m14:34:17[39m]  TramComponent has styleUrls, include them
+[[90m14:34:17[39m]  WeatherComponent has a templateUrl, include it
+[[90m14:34:17[39m]  WeatherComponent has styleUrls, include them
+[[90m14:34:17[39m] Prepare modules
+[[90m14:34:17[39m] Prepare injectables
+[[90m14:34:17[39m] Process routes
+[[90m14:34:17[39m] Prepare interfaces
+[[90m14:34:17[39m] Prepare miscellaneous
+[[90m14:34:17[39m] Process documentation coverage report
+[[90m14:34:17[39m] Generating documentation in export format json
+[[90m14:34:18[39m] Documentation generated in ./ in 2.177 seconds
 info @storybook/angular v6.3.10
 info 
-info => Cleaning outputDir: C:\\Users\\DISKAEMM\\AppData\\Local\\Temp\\chromatic--14136-CKLSbuBCTnh6
+info => Cleaning outputDir: C:\\Users\\DISKAEMM\\AppData\\Local\\Temp\\chromatic--10692-7x2kyuGIvfQm
 info => Loading presets
 info => Compiling preview..
 info => Loading 1 config file in "C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\.storybook"
@@ -368,47 +368,49 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building
 <s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
-<s> [webpack.Progress] 10% building 0/15 entries 3/15 dependencies 0/3 modules
-<s> [webpack.Progress] 10% building 0/15 entries 4/15 dependencies 0/3 modules
+<s> [webpack.Progress] 10% building 0/15 entries 14/15 dependencies 0/14 modules
+<s> [webpack.Progress] 10% building 0/15 entries 14/16 dependencies 0/14 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/style-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/postcss-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/resolve-url-loader/index.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/sass-loader/dist/cjs.js
-<s> [webpack.Progress] 10% building 0/15 entries 15/15 dependencies 0/15 modules
-<s> [webpack.Progress] 10% building 0/15 entries 26/68 dependencies 1/25 modules
-<s> [webpack.Progress] 13% building 1/15 entries 144/228 dependencies 15/89 modules
+<s> [webpack.Progress] 10% building 0/15 entries 15/42 dependencies 0/15 modules
+<s> [webpack.Progress] 10% building 0/15 entries 54/100 dependencies 8/46 modules
+<s> [webpack.Progress] 13% building 1/15 entries 165/228 dependencies 15/93 modules
 <s> [webpack.Progress] 13% building import loader ./node_modules/@mdx-js/loader/index.js
-<s> [webpack.Progress] 13% building 1/15 entries 490/573 dependencies 19/214 modules
+<s> [webpack.Progress] 13% building 1/15 entries 487/573 dependencies 19/213 modules
 <s> [webpack.Progress] 13% building import loader ./node_modules/ts-loader/index.js
 <s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
 <s> [webpack.Progress] 13% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
-<s> [webpack.Progress] 13% building 1/15 entries 519/573 dependencies 19/233 modules
-<s> [webpack.Progress] 13% building 1/15 entries 556/700 dependencies 21/263 modules
+<s> [webpack.Progress] 13% building 1/15 entries 521/573 dependencies 19/235 modules
+<s> [webpack.Progress] 13% building 1/15 entries 558/700 dependencies 21/265 modules
 [BABEL] Note: The code generator has deoptimised the styling of C:\Users\DISKAEMM\IdeaProjects\widget-moinitor\widget-monitor\node_modules\prettier\standalone.js as it exceeds the max of 500KB.
-<s> [webpack.Progress] 13% building 1/15 entries 700/912 dependencies 25/272 modules
-<s> [webpack.Progress] 13% building 1/15 entries 1314/1358 dependencies 100/384 modules
-<s> [webpack.Progress] 13% building 1/15 entries 1700/1893 dependencies 259/452 modules
+<s> [webpack.Progress] 13% building 1/15 entries 700/919 dependencies 25/272 modules
+<s> [webpack.Progress] 13% building 1/15 entries 1357/1500 dependencies 102/385 modules
+<s> [webpack.Progress] 13% building 1/15 entries 1660/1800 dependencies 237/448 modules
 <s> [webpack.Progress] 13% building import loader ./node_modules/raw-loader/dist/cjs.js
-<s> [webpack.Progress] 13% building 1/15 entries 1998/2066 dependencies 299/514 modules
-<s> [webpack.Progress] 13% building 1/15 entries 2468/2600 dependencies 324/671 modules
-<s> [webpack.Progress] 14% building 1/15 entries 2900/2962 dependencies 393/812 modules
-<s> [webpack.Progress] 15% building 1/15 entries 3200/3258 dependencies 459/874 modules
-<s> [webpack.Progress] 17% building 1/15 entries 3679/3800 dependencies 672/995 modules
-<s> [webpack.Progress] 19% building 2/15 entries 4143/4246 dependencies 842/1098 modules
-<s> [webpack.Progress] 22% building 2/15 entries 4871/4900 dependencies 1095/1268 modules
-<s> [webpack.Progress] 22% building 3/15 entries 4993/5034 dependencies 1148/1284 modules
-<s> [webpack.Progress] 24% building 4/15 entries 4993/5034 dependencies 1149/1284 modules
-<s> [webpack.Progress] 28% building 5/15 entries 4993/5034 dependencies 1150/1284 modules
-<s> [webpack.Progress] 32% building 6/15 entries 4993/5034 dependencies 1151/1284 modules
-<s> [webpack.Progress] 35% building 7/15 entries 4993/5034 dependencies 1152/1284 modules
-<s> [webpack.Progress] 39% building 8/15 entries 4993/5034 dependencies 1153/1284 modules
-<s> [webpack.Progress] 43% building 9/15 entries 4993/5034 dependencies 1154/1284 modules
-<s> [webpack.Progress] 46% building 10/15 entries 4993/5034 dependencies 1155/1284 modules
-<s> [webpack.Progress] 50% building 11/15 entries 4993/5034 dependencies 1156/1284 modules
-<s> [webpack.Progress] 54% building 12/15 entries 5471/5477 dependencies 1369/1413 modules
-<s> [webpack.Progress] 57% building 13/15 entries 5507/5510 dependencies 1409/1425 modules
-<s> [webpack.Progress] 61% building 14/15 entries 5507/5510 dependencies 1410/1425 modules
+<s> [webpack.Progress] 13% building 1/15 entries 2050/2116 dependencies 305/524 modules
+<s> [webpack.Progress] 13% building 1/15 entries 2300/2438 dependencies 321/580 modules
+<s> [webpack.Progress] 13% building 1/15 entries 2795/2836 dependencies 351/800 modules
+<s> [webpack.Progress] 14% building 1/15 entries 3095/3200 dependencies 426/866 modules
+<s> [webpack.Progress] 15% building 1/15 entries 3349/3400 dependencies 518/915 modules
+<s> [webpack.Progress] 17% building 1/15 entries 3700/3769 dependencies 686/998 modules
+<s> [webpack.Progress] 17% building 1/15 entries 3740/3830 dependencies 700/1015 modules
+<s> [webpack.Progress] 19% building 2/15 entries 4330/4427 dependencies 864/1128 modules
+<s> [webpack.Progress] 22% building 2/15 entries 4862/4900 dependencies 1092/1265 modules
+<s> [webpack.Progress] 22% building 3/15 entries 4985/5030 dependencies 1143/1280 modules
+<s> [webpack.Progress] 24% building 4/15 entries 4985/5030 dependencies 1144/1280 modules
+<s> [webpack.Progress] 28% building 5/15 entries 4985/5030 dependencies 1145/1280 modules
+<s> [webpack.Progress] 32% building 6/15 entries 4985/5030 dependencies 1146/1280 modules
+<s> [webpack.Progress] 35% building 7/15 entries 4985/5030 dependencies 1147/1280 modules
+<s> [webpack.Progress] 39% building 8/15 entries 4985/5030 dependencies 1148/1280 modules
+<s> [webpack.Progress] 43% building 9/15 entries 4985/5030 dependencies 1149/1280 modules
+<s> [webpack.Progress] 46% building 10/15 entries 4985/5030 dependencies 1150/1280 modules
+<s> [webpack.Progress] 50% building 11/15 entries 4985/5030 dependencies 1151/1280 modules
+<s> [webpack.Progress] 54% building 12/15 entries 5478/5481 dependencies 1370/1416 modules
+<s> [webpack.Progress] 57% building 13/15 entries 5511/5513 dependencies 1409/1428 modules
+<s> [webpack.Progress] 61% building 14/15 entries 5511/5513 dependencies 1410/1428 modules
 <s> [webpack.Progress] 65% building 15/15 entries 5515/5515 dependencies 1428/1428 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
@@ -511,8 +513,8 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.3d412508.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.3d412508.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.e23a517c.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.e23a517c.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.8a3f91c8.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.8a3f91c8.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 844.4844dd1e.iframe.bundle.js generate SourceMap
@@ -525,8 +527,8 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 459.b5167a1e.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.3c58eaf4.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.3c58eaf4.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.0563ae2e.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.0563ae2e.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.883fdf48.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 586.883fdf48.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
@@ -535,8 +537,8 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.90eda677.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.90eda677.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.01fcfff2.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.01fcfff2.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.6a8e2dfb.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.6a8e2dfb.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 913.4519a29f.iframe.bundle.js generate SourceMap
@@ -580,7 +582,7 @@ Starting type checking service...
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 100% 
 
-info => Preview built (59 s)
+info => Preview built (58 s)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
@@ -588,17 +590,17 @@ WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
-WARN   main.90eda677.iframe.bundle.js (303 KiB)
+WARN   main.01fcfff2.iframe.bundle.js (303 KiB)
 WARN   586.ada8c87b.iframe.bundle.js (3.92 MiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
 WARN   main (4.22 MiB)
 WARN       runtime~main.6a8e2dfb.iframe.bundle.js
 WARN       586.ada8c87b.iframe.bundle.js
-WARN       main.90eda677.iframe.bundle.js
+WARN       main.01fcfff2.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: C:\\Users\\DISKAEMM\\AppData\\Local\\Temp\\chromatic--14136-CKLSbuBCTnh6
+info => Output directory: C:\\Users\\DISKAEMM\\AppData\\Local\\Temp\\chromatic--10692-7x2kyuGIvfQm
