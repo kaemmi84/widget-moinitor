@@ -17,7 +17,7 @@ export class WeatherComponent implements OnInit {
   public dayHighTemperature? = 0;
   public dayLowTemperature? = 0;
   public weekForecast: {day: Date, temperature: number, icon: any}[] = []
-  public skyCons = new Skycons({'color': '#2f2f2f'});
+  public skyCons = new Skycons({'color': '#ffffff'});
 
   constructor(
     private weatherService: WeatherService

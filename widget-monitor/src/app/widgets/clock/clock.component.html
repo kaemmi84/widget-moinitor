@@ -1,5 +1,13 @@
 <div class="wrapper-clock">
   <div class="time-clock">
-    {{time | date:'H:mm:ss'}}
+    {{time | date:'H:mm'}}
+  </div>
+  <div class="day-ticker">
+    <div>
+      {{time | date:'d.M'}}
+    </div>
+    <div>
+      {{time | date:'E'}}
+    </div>
   </div>
 </div>

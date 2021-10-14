@@ -3,16 +3,19 @@
     <div class="weather-current-temperature">
       {{currentTemperature}}°
     </div>
+    <div class="weather-high-low">
+      <div>{{dayHighTemperature}}°</div>
+      <div>{{dayLowTemperature}}°</div>
+    </div>
     <div class="weather-current-temp-high-low">
-      <canvas id="iconCurrent" width="100" height="100"></canvas>
-      <div>H:{{dayHighTemperature}}° T:{{dayLowTemperature}}° </div>
+      <canvas id="iconCurrent" width="120" height="120"></canvas>
     </div>
   </div>
-  <div class="weather-forecast">
+  <!-- <div class="weather-forecast">
     <div class="weather-forecast-{{index}}" *ngFor="let daily of weekForecast; let index = index">
       <div class="weather-weekday">{{daily.day | date:'EEEE'}}</div>
       <canvas id="iconForecast{{index + 1}}" width="32" height="32"></canvas>
       <div class="weather-forecast-temperature">{{daily.temperature}}°</div>
     </div>
-  </div>
+  </div> -->
 </div>

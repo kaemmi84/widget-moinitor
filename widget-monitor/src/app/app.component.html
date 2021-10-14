@@ -1,15 +1,15 @@
 <div class="wrapper-widgets">
-  <app-tram
-    [stops]="stops"
-    [timeOffset]="timeOffset"
-    [numberOfOpportunities]="numberOfOpportunities"></app-tram>
+  <app-clock
+    [timeIsRunning]="true"
+  ></app-clock>
   <app-weather
     [latitude]="latitude"
     [longitude]="longitude"
   ></app-weather>
-  <app-clock
-    [timeIsRunning]="true"
-  ></app-clock>
+  <app-tram
+    [stops]="stops"
+    [timeOffset]="timeOffset"
+    [numberOfOpportunities]="numberOfOpportunities"></app-tram>
   <app-stock
     [symbol]="symbol"
     [interval]="interval"
