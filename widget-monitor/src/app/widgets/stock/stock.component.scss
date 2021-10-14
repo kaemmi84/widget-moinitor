@@ -6,6 +6,24 @@
   background: $secondary;
   color: $primary;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+
+  .stock {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
+
+    .stock-values {
+      .green {
+        color: green;
+      }
+
+      .red {
+        color: red;
+      }
+    }
+  }
 }

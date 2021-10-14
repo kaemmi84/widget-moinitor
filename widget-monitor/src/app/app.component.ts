@@ -47,7 +47,7 @@ export class AppComponent implements OnInit, OnDestroy{
     });
     Promise.all(promises).then(stops => {
       stops.forEach((monitor, index) => {
-        this.ShortDestinations(monitor, 'kaditz, am vorwerksfeld', 'Kaditz');
+        this.ShortDestinationsContains(monitor, 'kaditz', 'Kaditz');
         this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');
 
         this.stops.push({
@@ -69,6 +69,23 @@ export class AppComponent implements OnInit, OnDestroy{
   private ShortDestinations(monitor: any, longName: string, shortName:string) {
     const destinations = (monitor as IMonitor[])
       .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim() === longName.toLowerCase().trim());
+    destinations.forEach(destination => {
+      destination.direction = shortName;
+    });
+  }
+  
+
+  /**
+   * workaround shorten of direction name contains
+   * @param monitor
+   * @param longName
+   * @param shortName
+   * @constructor
+   * @private
+   */
+   private ShortDestinationsContains(monitor: any, contains: string, shortName:string) {
+    const destinations = (monitor as IMonitor[])
+      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim().includes(contains.toLowerCase().trim()));
     destinations.forEach(destination => {
       destination.direction = shortName;
     });

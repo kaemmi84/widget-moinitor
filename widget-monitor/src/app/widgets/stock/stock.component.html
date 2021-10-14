@@ -1,12 +1,29 @@
 <div class="wrapper-stock">
-  <canvas baseChart
-          height="202"
-          [datasets]="lineChartData"
-          [labels]="lineChartLabels"
-          [options]="lineChartOptions"
-          [colors]="lineChartColors"
-          [legend]="lineChartLegend"
-          [chartType]="lineChartType"
-          [plugins]="lineChartPlugins">
-  </canvas>
+  <div class="stock" *ngFor="let symbol of symbolData">
+    <div class="chart">
+      <canvas baseChart
+        width="100"
+        height="110"
+        [datasets]="symbol.prices"
+        [labels]="symbol.times"
+        [options]="lineChartOptions"
+        [colors]="symbol.lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins">
+      </canvas>
+    </div>
+    <div class="stock-name">
+      {{symbol.name}}
+    </div>
+    <div class="stock-values">
+      <div class="stock-current-price">
+        {{symbol.currentPrice}}
+      </div>
+      <div class="stock-relative-difference" [ngClass]="{'red': symbol.relativeDifference < 0, 'green': symbol.relativeDifference > 0}">
+        <ng-container *ngIf="symbol.relativeDifference > 0">+</ng-container>{{symbol.relativeDifference}}&thinsp;%
+      </div>
+    </div>
+  </div>
+  
 </div>

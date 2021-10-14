@@ -6,8 +6,8 @@
         "name": "Gabelsbergerstr."
       },
       {
-        "id": "33000043",
-        "name": "Blasewitzer / Fetscherstr."
+        "id": "33000062",
+        "name": "Fetscherplatz"
       }
     ],
     "timeOffset": 0
@@ -17,7 +17,7 @@
     "longitude": 13.7372621
   },
   "stock": {
-    "symbol": "NDAQ",
+    "symbol": "AAPL,MSFT,AAPL",
     "interval": "1d",
     "range": "1mo"
   }

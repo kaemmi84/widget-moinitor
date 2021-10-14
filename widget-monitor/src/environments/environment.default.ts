@@ -5,7 +5,8 @@
 export const environmentDefault = {
   production: false,
   darkSkyApiKey: '00000',
-  yahooApiKey: '00000'
+  yahooApiKey: '00000',
+  alphavantageKey: '00000'
 };
 
 /*

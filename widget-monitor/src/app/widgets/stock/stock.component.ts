@@ -3,6 +3,8 @@ import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import {StockService} from "./service/stock.service";
 import {timer} from "rxjs";
+import { StockAvService } from './service/stock.av.service';
+import { SymbolData } from './interfaces/symbol';
 
 @Component({
   selector: 'app-stock',
@@ -11,9 +13,13 @@ import {timer} from "rxjs";
 })
 export class StockComponent implements OnInit {
 
-  @Input() symbol: string = 'NDAQ'
+  public symbolData: SymbolData[] = [];
+
+  @Input() symbols: string = 'NDAQ'
   @Input() interval: string = '1d'
   @Input() range: string = '1mo'
+
+  
 
   // Array of different segments in chart
   lineChartData: ChartDataSets[] = [
@@ -37,7 +43,7 @@ export class StockComponent implements OnInit {
       }],
       yAxes: [{
         ticks:  {
-
+          display: false,
           fontColor: 'white'
         },
         gridLines: {
@@ -60,7 +66,7 @@ export class StockComponent implements OnInit {
   // Define colors of chart segments
   lineChartColors: Color[] = [
     {
-      backgroundColor: 'white',
+      backgroundColor: '#2f2f2f',
       borderColor: 'white',
     }
   ];
@@ -74,21 +80,56 @@ export class StockComponent implements OnInit {
   lineChartPlugins = [];
 
   constructor(
-    private stockService: StockService
+    private stockService: StockService,
+    private stockAvService: StockAvService
   ) { }
 
   ngOnInit(): void {
     timer(0,1800000).subscribe(() => this.getStock());
   }
 
+  public getLineChartData(data: number[]) {
+    const lineChartData = [
+      { data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0 },
+    ];
+    console.log(lineChartData);
+    return lineChartData;
+  }
+  
+  public getRelativeDifferance(prices: number[]): number {
+    if(!prices.length) {
+      return -1000;
+    }
+    return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;
+  }
+
+  private getStockAv() {
+
+  }
+
   private getStock() {
-    this.stockService.getSpark(this.symbol, this.interval, this.range).subscribe((result: any) => {
-      result[this.symbol.trim()].timestamp.forEach((time: number) => {
-        this.lineChartLabels.push(time.toString());
+    
+    //this.stockService.getSparkMock()
+    this.stockService.getSpark(this.symbols, this.interval, this.range)
+       .subscribe((result: any) => {
+      this.symbolData = [];
+      this.symbols.split(',').forEach((symbol: string) => {
+        this.symbolData.push(
+          {
+            name: symbol.slice(0,4), 
+            currentPrice: result[symbol].chartPreviousClose, 
+            relativeDifference: this.getRelativeDifferance(result[symbol].close),
+            prices: this.getLineChartData(result[symbol].close), 
+            times: (result[symbol].timestamp as number[]).map(time => time.toString()),
+            lineChartColors: [
+              {
+                backgroundColor: '#2f2f2f',
+                borderColor: this.getRelativeDifferance(result[symbol].close) > 0 ? 'green' : 'red',
+              }
+            ]
+          });
       })
-      result[this.symbol.trim()].close.forEach((curse: number) => {
-        this.lineChartData[0]?.data?.push(curse);
-      })
+      
     })
   }
 }
