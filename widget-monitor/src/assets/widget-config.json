@@ -19,6 +19,7 @@
   "stock": {
     "symbol": "AAPL,MSFT,AAPL",
     "interval": "1d",
-    "range": "1mo"
+    "range": "1mo",
+    "mockData": true
   }
 }

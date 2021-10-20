@@ -20,6 +20,7 @@ export class AppComponent implements OnInit, OnDestroy{
   public symbol: string = 'NDAQ';
   public interval: string = '1d';
   public range: string = '1mo';
+  public mockData: boolean = true;
 
   public subscription: Subscription = new Subscription();
 
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit, OnDestroy{
     this.symbol = AppConfig.settings.stock.symbol;
     this.interval = AppConfig.settings.stock.interval;
     this.range = AppConfig.settings.stock.range;
+    this.mockData = AppConfig.settings.stock.mockData;
   }
 
   ngOnDestroy(): void {
@@ -48,6 +50,7 @@ export class AppComponent implements OnInit, OnDestroy{
     Promise.all(promises).then(stops => {
       stops.forEach((monitor, index) => {
         this.ShortDestinationsContains(monitor, 'kaditz', 'Kaditz');
+        this.ShortDestinationsContains(monitor, 'messe', 'Messe');
         this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');
 
         this.stops.push({
@@ -73,12 +76,12 @@ export class AppComponent implements OnInit, OnDestroy{
       destination.direction = shortName;
     });
   }
-  
+
 
   /**
    * workaround shorten of direction name contains
    * @param monitor
-   * @param longName
+   * @param contains
    * @param shortName
    * @constructor
    * @private

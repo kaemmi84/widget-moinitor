@@ -14,5 +14,6 @@ export interface WidgetConfig {
     symbol: string,
     interval: string,
     range: string
+    mockData: boolean;
   }
 }

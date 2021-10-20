@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import {StockService} from "./service/stock.service";
-import {timer} from "rxjs";
+import {Observable, timer} from "rxjs";
 import { StockAvService } from './service/stock.av.service';
 import { SymbolData } from './interfaces/symbol';
 
@@ -18,8 +18,7 @@ export class StockComponent implements OnInit {
   @Input() symbols: string = 'NDAQ'
   @Input() interval: string = '1d'
   @Input() range: string = '1mo'
-
-  
+  @Input() mockData: boolean = false;
 
   // Array of different segments in chart
   lineChartData: ChartDataSets[] = [
@@ -95,7 +94,7 @@ export class StockComponent implements OnInit {
     console.log(lineChartData);
     return lineChartData;
   }
-  
+
   public getRelativeDifferance(prices: number[]): number {
     if(!prices.length) {
       return -1000;
@@ -103,23 +102,17 @@ export class StockComponent implements OnInit {
     return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;
   }
 
-  private getStockAv() {
-
-  }
-
   private getStock() {
-    
-    //this.stockService.getSparkMock()
-    this.stockService.getSpark(this.symbols, this.interval, this.range)
+    this.getService()
        .subscribe((result: any) => {
       this.symbolData = [];
       this.symbols.split(',').forEach((symbol: string) => {
         this.symbolData.push(
           {
-            name: symbol.slice(0,4), 
-            currentPrice: result[symbol].chartPreviousClose, 
+            name: symbol.slice(0,4),
+            currentPrice: result[symbol].chartPreviousClose,
             relativeDifference: this.getRelativeDifferance(result[symbol].close),
-            prices: this.getLineChartData(result[symbol].close), 
+            prices: this.getLineChartData(result[symbol].close),
             times: (result[symbol].timestamp as number[]).map(time => time.toString()),
             lineChartColors: [
               {
@@ -129,7 +122,13 @@ export class StockComponent implements OnInit {
             ]
           });
       })
-      
+
     })
+  }
+
+  private getService(): Observable<Object> {
+    return this.mockData
+      ? this.stockService.getSparkMock()
+      : this.stockService.getSpark(this.symbols, this.interval, this.range)
   }
 }
