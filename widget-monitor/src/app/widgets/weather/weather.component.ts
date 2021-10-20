@@ -12,6 +12,7 @@ export class WeatherComponent implements OnInit {
 
   @Input() latitude: number = 0;
   @Input() longitude: number = 0;
+  @Input() animateGraphics: boolean = true;
 
   public currentTemperature? = 0;
   public dayHighTemperature? = 0;
@@ -59,7 +60,9 @@ export class WeatherComponent implements OnInit {
       this.weekForecast.forEach((value, index) => {
         this.skyCons.add(`iconForecast${index + 1}`, value.icon);
       })
-      this.skyCons.play();
+      if (this.animateGraphics) {
+        this.skyCons.play();
+      }
     }, 1000);
   }
 }
