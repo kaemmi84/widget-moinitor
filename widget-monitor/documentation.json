@@ -1194,7 +1194,7 @@
                 "OnInit",
                 "OnDestroy"
             ],
-            "templateData": "<div class=\"wrapper-widgets\">\r\n  <app-clock\r\n    [timeIsRunning]=\"true\"\r\n  ></app-clock>\r\n  <app-weather\r\n    [latitude]=\"latitude\"\r\n    [longitude]=\"longitude\"\r\n    [animateGraphics]=\"true\"\r\n  ></app-weather>\r\n  <app-tram\r\n    [stops]=\"stops\"\r\n    [timeOffset]=\"timeOffset\"\r\n    [numberOfOpportunities]=\"numberOfOpportunities\"></app-tram>\r\n  <app-stock\r\n    [symbols]=\"symbol\"\r\n    [interval]=\"interval\"\r\n    [range]=\"range\"\r\n    [mockData]=\"mockData\"\r\n  ></app-stock>\r\n</div>\r\n\r\n"
+            "templateData": "<div class=\"wrapper-widgets\">\r\n  <app-clock\r\n    [timeIsRunning]=\"true\"\r\n  ></app-clock>\r\n  <app-weather\r\n    [latitude]=\"latitude\"\r\n    [longitude]=\"longitude\"\r\n    [animateGraphics]=\"true\"\r\n  ></app-weather>\r\n  <app-tram\r\n    [stops]=\"stops\"\r\n    [timeOffset]=\"timeOffset\"\r\n    [numberOfOpportunities]=\"numberOfOpportunities\"></app-tram>\r\n  <app-stock\r\n    [symbols]=\"symbol\"\r\n    [interval]=\"interval\"\r\n    [range]=\"range\"\r\n    [mockData]=\"mockData\"\r\n    positiveColor=\"green\"\r\n    negativeColor=\"red\"\r\n  ></app-stock>\r\n</div>\r\n\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -1641,7 +1641,7 @@
         },
         {
             "name": "StockComponent",
-            "id": "component-StockComponent-85c8ee5c8c67047653686ebef5dade85",
+            "id": "component-StockComponent-8d6d8652bf3312ec89136c9716b82538",
             "file": "src/app/widgets/stock/stock.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1665,7 +1665,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Interval for Stock \r\nOptions: 1m 5m 15m 1d 1wk 1mo",
                     "description": "<p>Interval for Stock \nOptions: 1m 5m 15m 1d 1wk 1mo</p>\n",
-                    "line": 26,
+                    "line": 29,
                     "type": "string"
                 },
                 {
@@ -1675,8 +1675,28 @@
                     "deprecationMessage": "",
                     "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
                     "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
-                    "line": 38,
+                    "line": 41,
                     "type": "boolean"
+                },
+                {
+                    "name": "negativeColor",
+                    "defaultValue": "'red'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
+                    "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
+                    "line": 54,
+                    "type": "string"
+                },
+                {
+                    "name": "positiveColor",
+                    "defaultValue": "'green'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
+                    "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
+                    "line": 47,
+                    "type": "string"
                 },
                 {
                     "name": "range",
@@ -1685,7 +1705,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Range of Stock\r\nOptions: 1d 5d 1mo 3mo 6mo 1y 5y max",
                     "description": "<p>Range of Stock\nOptions: 1d 5d 1mo 3mo 6mo 1y 5y max</p>\n",
-                    "line": 32,
+                    "line": 35,
                     "type": "string"
                 },
                 {
@@ -1695,7 +1715,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Symbols for stock",
                     "description": "<p>Symbols for stock</p>\n",
-                    "line": 21,
+                    "line": 24,
                     "type": "string"
                 }
             ],
@@ -1709,7 +1729,7 @@
                     "type": "Color[]",
                     "optional": false,
                     "description": "<p>Define colors of chart segments</p>\n",
-                    "line": 92,
+                    "line": 108,
                     "rawdescription": "\n\nDefine colors of chart segments\n"
                 },
                 {
@@ -1720,7 +1740,7 @@
                     "type": "ChartDataSets[]",
                     "optional": false,
                     "description": "<p>Array of different segments in chart</p>\n",
-                    "line": 43,
+                    "line": 59,
                     "rawdescription": "\n\nArray of different segments in chart\n"
                 },
                 {
@@ -1731,7 +1751,7 @@
                     "type": "Label[]",
                     "optional": false,
                     "description": "<p>Labels shown on the x-axis</p>\n",
-                    "line": 50,
+                    "line": 66,
                     "rawdescription": "\n\nLabels shown on the x-axis\n"
                 },
                 {
@@ -1742,7 +1762,7 @@
                     "type": "",
                     "optional": false,
                     "description": "<p>Set true to show legends</p>\n",
-                    "line": 102,
+                    "line": 118,
                     "rawdescription": "\n\nSet true to show legends\n"
                 },
                 {
@@ -1753,7 +1773,7 @@
                     "type": "ChartOptions",
                     "optional": false,
                     "description": "<p>Define chart options</p>\n",
-                    "line": 55,
+                    "line": 71,
                     "rawdescription": "\n\nDefine chart options\n"
                 },
                 {
@@ -1764,7 +1784,7 @@
                     "type": "[]",
                     "optional": false,
                     "description": "<p>Plugins for Chart.</p>\n",
-                    "line": 112,
+                    "line": 128,
                     "rawdescription": "\n\nPlugins for Chart.\n"
                 },
                 {
@@ -1775,7 +1795,7 @@
                     "type": "ChartType",
                     "optional": false,
                     "description": "<p>Define type of chart</p>\n",
-                    "line": 107,
+                    "line": 123,
                     "rawdescription": "\n\nDefine type of chart\n"
                 },
                 {
@@ -1785,8 +1805,9 @@
                     "deprecationMessage": "",
                     "type": "SymbolData[]",
                     "optional": false,
-                    "description": "",
-                    "line": 16,
+                    "description": "<p>Array of symbol informations for chart.js</p>\n",
+                    "line": 19,
+                    "rawdescription": "\n\nArray of symbol informations for chart.js\n",
                     "modifierKind": [
                         123
                     ]
@@ -1806,26 +1827,55 @@
                     "optional": false,
                     "returnType": "{}",
                     "typeParameters": [],
-                    "line": 129,
+                    "line": 148,
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "rawdescription": "\n\nReturn Chartdata for Y axes\n",
+                    "description": "<p>Return Chartdata for Y axes</p>\n",
                     "modifierKind": [
                         123
                     ],
                     "jsdoctags": [
                         {
-                            "name": "data",
+                            "name": {
+                                "pos": 2997,
+                                "end": 3001,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "data"
+                            },
                             "type": "number[]",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "text": "param"
-                            }
+                                "pos": 2991,
+                                "end": 2996,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Array of numbers</p>\n"
+                        },
+                        {
+                            "tagName": {
+                                "pos": 3026,
+                                "end": 3033,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "returns"
+                            },
+                            "comment": "<p>Chartdata for chart.js</p>\n"
                         }
                     ]
                 },
                 {
-                    "name": "getRelativeDifferance",
+                    "name": "getRelativeDifference",
                     "args": [
                         {
                             "name": "prices",
@@ -1837,21 +1887,50 @@
                     "optional": false,
                     "returnType": "number",
                     "typeParameters": [],
-                    "line": 136,
+                    "line": 160,
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "rawdescription": "\n\nCalculate the differnce between beginn and end of the stockchart\n",
+                    "description": "<p>Calculate the differnce between beginn and end of the stockchart</p>\n",
                     "modifierKind": [
                         123
                     ],
                     "jsdoctags": [
                         {
-                            "name": "prices",
+                            "name": {
+                                "pos": 3358,
+                                "end": 3364,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "prices"
+                            },
                             "type": "number[]",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "text": "param"
-                            }
+                                "pos": 3352,
+                                "end": 3357,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Array of all prices</p>\n"
+                        },
+                        {
+                            "tagName": {
+                                "pos": 3392,
+                                "end": 3399,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "returns"
+                            },
+                            "comment": "<p>Relative Difference</p>\n"
                         }
                     ]
                 },
@@ -1861,11 +1940,27 @@
                     "optional": false,
                     "returnType": "Observable<Object>",
                     "typeParameters": [],
-                    "line": 167,
+                    "line": 198,
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "rawdescription": "\n\nHelping service to choose Mock or Live Data\n",
+                    "description": "<p>Helping service to choose Mock or Live Data</p>\n",
                     "modifierKind": [
                         121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 4607,
+                                "end": 4614,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "returns"
+                            },
+                            "comment": ""
+                        }
                     ]
                 },
                 {
@@ -1874,9 +1969,11 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 143,
+                    "line": 170,
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "rawdescription": "\n\nGet Stock from Yahoo Api or Mockdata\n",
+                    "description": "<p>Get Stock from Yahoo Api or Mockdata</p>\n",
                     "modifierKind": [
                         121
                     ]
@@ -1894,7 +1991,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 119,
+                    "line": 135,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1915,7 +2012,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 125,
+                    "line": 139,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1927,11 +2024,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';\r\nimport {ChartDataSets, ChartOptions, ChartType} from 'chart.js';\r\nimport { Color, Label } from 'ng2-charts';\r\nimport {StockService} from \"./service/stock.service\";\r\nimport {Observable, timer} from \"rxjs\";\r\nimport { StockAvService } from './service/stock.av.service';\r\nimport { SymbolData } from './interfaces/symbol';\r\n\r\n@Component({\r\n  selector: 'app-stock',\r\n  templateUrl: './stock.component.html',\r\n  styleUrls: ['./stock.component.scss']\r\n})\r\nexport class StockComponent implements OnInit, OnChanges {\r\n\r\n  public symbolData: SymbolData[] = [];\r\n\r\n  /**\r\n   * Symbols for stock\r\n   */\r\n  @Input() symbols: string = 'NDAQ'\r\n  /**\r\n   * Interval for Stock \r\n   * Options: 1m 5m 15m 1d 1wk 1mo\r\n   */\r\n  @Input() interval: string = '1d'\r\n\r\n  /**\r\n   * Range of Stock\r\n   * Options: 1d 5d 1mo 3mo 6mo 1y 5y max\r\n   */\r\n  @Input() range: string = '1mo'\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n  @Input() mockData: boolean = false;\r\n\r\n  /**\r\n   * Array of different segments in chart\r\n   */\r\n  lineChartData: ChartDataSets[] = [\r\n    { data: [], label: 'Curse', pointRadius: 0, borderWidth: 0, lineTension: 0 },\r\n  ];\r\n\r\n  /**\r\n   * Labels shown on the x-axis \r\n   */\r\n  lineChartLabels: Label[] = [];\r\n\r\n  /**\r\n   * Define chart options\r\n   */\r\n  lineChartOptions: ChartOptions = {\r\n    responsive: true,\r\n    defaultColor: 'white',\r\n    scales: {\r\n      xAxes: [{\r\n        ticks:  {\r\n          display: false\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }],\r\n      yAxes: [{\r\n        ticks:  {\r\n          display: false,\r\n          fontColor: 'white'\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }]\r\n    },\r\n    legend: {\r\n      display: false,\r\n    },\r\n    layout: {\r\n      padding: {\r\n        top:40,\r\n        left:10,\r\n        right: 10,\r\n      }\r\n    }\r\n  };\r\n\r\n  /**\r\n   * Define colors of chart segments\r\n   */\r\n  lineChartColors: Color[] = [\r\n    {\r\n      backgroundColor: '#2f2f2f',\r\n      borderColor: 'white',\r\n    }\r\n  ];\r\n\r\n  /**\r\n   * Set true to show legends\r\n   */\r\n  lineChartLegend = false;\r\n\r\n  /**\r\n   * Define type of chart\r\n   */\r\n  lineChartType: ChartType = 'line';\r\n\r\n  /**\r\n   * Plugins for Chart.\r\n   */\r\n  lineChartPlugins = [];\r\n\r\n  constructor(\r\n    private stockService: StockService,\r\n    private stockAvService: StockAvService\r\n  ) { }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    if (changes.mockData || changes.symbol || changes.interval || changes.range) {\r\n      this.getStock();\r\n    }\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    timer(0,1800000).subscribe(() => this.getStock());\r\n  }\r\n\r\n  public getLineChartData(data: number[]) {\r\n    const lineChartData = [\r\n      { data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0 },\r\n    ];\r\n    return lineChartData;\r\n  }\r\n\r\n  public getRelativeDifferance(prices: number[]): number {\r\n    if(!prices.length) {\r\n      return -1000;\r\n    }\r\n    return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;\r\n  }\r\n\r\n  private getStock() {\r\n    this.getService()\r\n       .subscribe((result: any) => {\r\n      this.symbolData = [];\r\n      this.symbols.split(',').forEach((symbol: string) => {\r\n        this.symbolData.push(\r\n          {\r\n            name: symbol.slice(0,4),\r\n            currentPrice: result[symbol].chartPreviousClose,\r\n            relativeDifference: this.getRelativeDifferance(result[symbol].close),\r\n            prices: this.getLineChartData(result[symbol].close),\r\n            times: (result[symbol].timestamp as number[]).map(time => time.toString()),\r\n            lineChartColors: [\r\n              {\r\n                backgroundColor: '#2f2f2f',\r\n                borderColor: this.getRelativeDifferance(result[symbol].close) > 0 ? 'green' : 'red',\r\n              }\r\n            ]\r\n          });\r\n      })\r\n\r\n    })\r\n  }\r\n\r\n  private getService(): Observable<Object> {\r\n    return this.mockData\r\n      ? this.stockService.getSparkMock()\r\n      : this.stockService.getSpark(this.symbols, this.interval, this.range)\r\n  }\r\n}\r\n",
+            "sourceCode": "import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';\r\nimport {ChartDataSets, ChartOptions, ChartType} from 'chart.js';\r\nimport { Color, Label } from 'ng2-charts';\r\nimport {StockService} from \"./service/stock.service\";\r\nimport {Observable, timer} from \"rxjs\";\r\nimport { StockAvService } from './service/stock.av.service';\r\nimport { SymbolData } from './interfaces/symbol';\r\n\r\n@Component({\r\n  selector: 'app-stock',\r\n  templateUrl: './stock.component.html',\r\n  styleUrls: ['./stock.component.scss']\r\n})\r\nexport class StockComponent implements OnInit, OnChanges {\r\n\r\n  /**\r\n   * Array of symbol informations for chart.js\r\n   */\r\n  public symbolData: SymbolData[] = [];\r\n\r\n  /**\r\n   * Symbols for stock\r\n   */\r\n  @Input() symbols: string = 'NDAQ'\r\n  /**\r\n   * Interval for Stock \r\n   * Options: 1m 5m 15m 1d 1wk 1mo\r\n   */\r\n  @Input() interval: string = '1d'\r\n\r\n  /**\r\n   * Range of Stock\r\n   * Options: 1d 5d 1mo 3mo 6mo 1y 5y max\r\n   */\r\n  @Input() range: string = '1mo'\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n  @Input() mockData: boolean = false;\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() positiveColor: string = 'green';\r\n   \r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() negativeColor: string = 'red';\r\n\r\n  /**\r\n   * Array of different segments in chart\r\n   */\r\n  lineChartData: ChartDataSets[] = [\r\n    { data: [], label: 'Curse', pointRadius: 0, borderWidth: 0, lineTension: 0 },\r\n  ];\r\n\r\n  /**\r\n   * Labels shown on the x-axis \r\n   */\r\n  lineChartLabels: Label[] = [];\r\n\r\n  /**\r\n   * Define chart options\r\n   */\r\n  lineChartOptions: ChartOptions = {\r\n    responsive: true,\r\n    defaultColor: 'white',\r\n    scales: {\r\n      xAxes: [{\r\n        ticks:  {\r\n          display: false\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }],\r\n      yAxes: [{\r\n        ticks:  {\r\n          display: false,\r\n          fontColor: 'white'\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }]\r\n    },\r\n    legend: {\r\n      display: false,\r\n    },\r\n    layout: {\r\n      padding: {\r\n        top:40,\r\n        left:10,\r\n        right: 10,\r\n      }\r\n    }\r\n  };\r\n\r\n  /**\r\n   * Define colors of chart segments\r\n   */\r\n  lineChartColors: Color[] = [\r\n    {\r\n      backgroundColor: '#2f2f2f',\r\n      borderColor: 'white',\r\n    }\r\n  ];\r\n\r\n  /**\r\n   * Set true to show legends\r\n   */\r\n  lineChartLegend = false;\r\n\r\n  /**\r\n   * Define type of chart\r\n   */\r\n  lineChartType: ChartType = 'line';\r\n\r\n  /**\r\n   * Plugins for Chart.\r\n   */\r\n  lineChartPlugins = [];\r\n\r\n  constructor(\r\n    private stockService: StockService,\r\n    private stockAvService: StockAvService\r\n  ) { }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    this.getStock();\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    timer(0,1800000).subscribe(() => this.getStock());\r\n  }\r\n\r\n  /**\r\n   * Return Chartdata for Y axes\r\n   * @param data Array of numbers\r\n   * @returns Chartdata for chart.js\r\n   */\r\n  public getLineChartData(data: number[]) {\r\n    const lineChartData = [\r\n      { data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0 },\r\n    ];\r\n    return lineChartData;\r\n  }\r\n\r\n  /**\r\n   * Calculate the differnce between beginn and end of the stockchart\r\n   * @param prices Array of all prices\r\n   * @returns Relative Difference\r\n   */\r\n  public getRelativeDifference(prices: number[]): number {\r\n    if(!prices.length) {\r\n      return -1000;\r\n    }\r\n    return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;\r\n  }\r\n\r\n  /**\r\n   * Get Stock from Yahoo Api or Mockdata\r\n   */\r\n  private getStock() {\r\n    this.getService()\r\n       .subscribe((result: any) => {\r\n      this.symbolData = [];\r\n      this.symbols.split(',').forEach((symbol: string) => {\r\n        this.symbolData.push(\r\n          {\r\n            name: symbol.slice(0,4),\r\n            currentPrice: result[symbol].chartPreviousClose,\r\n            relativeDifference: this.getRelativeDifference(result[symbol].close),\r\n            prices: this.getLineChartData(result[symbol].close),\r\n            times: (result[symbol].timestamp as number[]).map(time => time.toString()),\r\n            lineChartColors: [\r\n              {\r\n                backgroundColor: '#2f2f2f',\r\n                borderColor: this.getRelativeDifference(result[symbol].close) > 0 ? this.positiveColor : this.negativeColor,\r\n              }\r\n            ]\r\n          });\r\n      })\r\n\r\n    })\r\n  }\r\n\r\n  /**\r\n   * Helping service to choose Mock or Live Data\r\n   * @returns \r\n   */\r\n  private getService(): Observable<Object> {\r\n    return this.mockData\r\n      ? this.stockService.getSparkMock()\r\n      : this.stockService.getSpark(this.symbols, this.interval, this.range)\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"src/style/variable\";\r\n\r\n.wrapper-stock {\r\n  width: 100%;\r\n  height: 100%;\r\n  background: $secondary;\r\n  color: $primary;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-content: center;\r\n\r\n  .stock {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n    font-size: 2em;\r\n\r\n    .stock-values {\r\n      .green {\r\n        color: green;\r\n      }\r\n\r\n      .red {\r\n        color: red;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import \"src/style/variable\";\r\n.wrapper-stock {\r\n  width: 100%;\r\n  height: 100%;\r\n  background: $secondary;\r\n  color: $primary;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-content: center;\r\n\r\n  .stock {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n    font-size: 2em;\r\n  }\r\n}\r\n",
                     "styleUrl": "./stock.component.scss"
                 }
             ],
@@ -1955,7 +2052,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 112,
+                "line": 128,
                 "jsdoctags": [
                     {
                         "name": "stockService",
@@ -1981,11 +2078,11 @@
                 "OnInit",
                 "OnChanges"
             ],
-            "templateData": "<div class=\"wrapper-stock\">\r\n  <div class=\"stock\" *ngFor=\"let symbol of symbolData\">\r\n    <div class=\"chart\" *ngIf=\"symbol\">\r\n      <canvas baseChart\r\n        width=\"100\"\r\n        height=\"110\"\r\n        [datasets]=\"symbol.prices\"\r\n        [labels]=\"symbol.times\"\r\n        [options]=\"lineChartOptions\"\r\n        [colors]=\"symbol.lineChartColors\"\r\n        [legend]=\"lineChartLegend\"\r\n        [chartType]=\"lineChartType\"\r\n        [plugins]=\"lineChartPlugins\">\r\n      </canvas>\r\n    </div>\r\n    <div class=\"stock-name\">\r\n      {{symbol.name}}\r\n    </div>\r\n    <div class=\"stock-values\">\r\n      <div class=\"stock-current-price\">\r\n        {{symbol.currentPrice}}\r\n      </div>\r\n      <div class=\"stock-relative-difference\" [ngClass]=\"{'red': symbol.relativeDifference < 0, 'green': symbol.relativeDifference > 0}\">\r\n        <ng-container *ngIf=\"symbol.relativeDifference > 0\">+</ng-container>{{symbol.relativeDifference}}&thinsp;%\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n</div>\r\n"
+            "templateData": "<div class=\"wrapper-stock\">\r\n  <div class=\"stock\" *ngFor=\"let symbol of symbolData\">\r\n    <div class=\"chart\" *ngIf=\"symbol\">\r\n      <canvas baseChart\r\n        width=\"100\"\r\n        height=\"110\"\r\n        [datasets]=\"symbol.prices\"\r\n        [labels]=\"symbol.times\"\r\n        [options]=\"lineChartOptions\"\r\n        [colors]=\"symbol.lineChartColors\"\r\n        [legend]=\"lineChartLegend\"\r\n        [chartType]=\"lineChartType\"\r\n        [plugins]=\"lineChartPlugins\">\r\n      </canvas>\r\n    </div>\r\n    <div class=\"stock-name\">\r\n      {{symbol.name}}\r\n    </div>\r\n    <div class=\"stock-values\">\r\n      <div class=\"stock-current-price\">\r\n        {{symbol.currentPrice}}\r\n      </div>\r\n      <div class=\"stock-relative-difference\" [ngStyle]=\"{'color': symbol.relativeDifference > 0 ? positiveColor : negativeColor}\">\r\n        <ng-container *ngIf=\"symbol.relativeDifference > 0\">+</ng-container>{{symbol.relativeDifference}}&thinsp;%\r\n      </div>\r\n    </div>\r\n  </div>\r\n  \r\n</div>\r\n"
         },
         {
             "name": "TramComponent",
-            "id": "component-TramComponent-c5aa7b610aa572df01e82355ffa122d5",
+            "id": "component-TramComponent-a8bd458e5b2dd5c2e51a8e75bdc887de",
             "file": "src/app/widgets/tram/tram.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2031,12 +2128,40 @@
             "propertiesClass": [],
             "methodsClass": [
                 {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2048,7 +2173,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input, OnInit} from '@angular/core';\r\nimport {Stop} from \"./interfaces/dvb\";\r\n\r\n@Component({\r\n  selector: 'app-tram',\r\n  templateUrl: './tram.component.html',\r\n  styleUrls: ['./tram.component.scss']\r\n})\r\nexport class TramComponent implements OnInit {\r\n\r\n  @Input() stops: Stop[] = [];\r\n  @Input() timeOffset = 0;\r\n  @Input() numberOfOpportunities = 4;\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "sourceCode": "import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';\r\nimport {Stop} from \"./interfaces/dvb\";\r\n\r\n@Component({\r\n  selector: 'app-tram',\r\n  templateUrl: './tram.component.html',\r\n  styleUrls: ['./tram.component.scss']\r\n})\r\nexport class TramComponent implements OnInit, OnChanges {\r\n\r\n  @Input() stops: Stop[] = [];\r\n  @Input() timeOffset = 0;\r\n  @Input() numberOfOpportunities = 4;\r\n\r\n  constructor() { }\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    console.log('stops', this.stops)\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2066,7 +2191,8 @@
                 "line": 13
             },
             "implements": [
-                "OnInit"
+                "OnInit",
+                "OnChanges"
             ],
             "templateData": "<div class=\"wrapper-tram\">\r\n  <div class=\"tram-stops\" *ngFor=\"let stop of stops\">\r\n    <div class=\"stop-name\">{{stop.name}}</div>\r\n    <div class=\"stop-cards\">\r\n      <div class=\"stop-opportunities\" *ngFor=\"let opportunity of stop.monitor\">\r\n          <div class=\"opp-line\">{{opportunity.line}}</div>\r\n          <div class=\"opp-direction\">{{opportunity.direction}}</div>\r\n          <div class=\"opp-time\">{{opportunity.arrivalTime | date:'H:mm'}}</div>\r\n      </div>\r\n    </div>\r\n    <div></div>\r\n  </div>\r\n</div>\r\n"
         },
@@ -2370,6 +2496,16 @@
                 "defaultValue": "() => {\r\n  return({\r\n    props: {\r\n      timeIsRunning: false,\r\n      time: new Date(2021, 10, 9, 15, 15, 15, 15)\r\n    }\r\n  })\r\n}"
             },
             {
+                "name": "Animated",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/weather.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "AppleAndMicrosoft",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2393,21 +2529,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
             },
             {
                 "name": "environmentDefault",
@@ -2520,6 +2656,26 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Stay",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/weather.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "stops",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/traum.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  {\r\n      \"name\": \"Gabelsbergerstr.\",\r\n      \"monitor\": [\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:01:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:01:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": -1,\r\n              \"scheduledTimeRelative\": -1,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:05:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:05:00.000Z\",\r\n              \"id\": \"voe:11012: :H:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Leutewitz\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 3,\r\n              \"scheduledTimeRelative\": 3,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:15:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:15:00.000Z\",\r\n              \"id\": \"voe:11012: :R:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"2\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 13,\r\n              \"scheduledTimeRelative\": 13,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:16:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:16:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Striesen\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 14,\r\n              \"scheduledTimeRelative\": 14,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          }\r\n      ]\r\n  },\r\n  {\r\n      \"name\": \"Fetscherplatz\",\r\n      \"monitor\": [\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:03:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:03:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"7\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 1,\r\n              \"scheduledTimeRelative\": 1,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11012: :H:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Leutewitz\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11010: :H:j21\",\r\n              \"line\": \"10\",\r\n              \"direction\": \"Messe\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11010,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11004: :R:j21\",\r\n              \"line\": \"4\",\r\n              \"direction\": \"Laubegast\",\r\n              \"platform\": {\r\n                  \"name\": \"2\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11004,\r\n                  \"network\": \"voe\"\r\n              }\r\n          }\r\n      ]\r\n  }\r\n]"
+            },
+            {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2568,6 +2724,36 @@
                 "deprecationMessage": "",
                 "type": "Story<StockComponent>",
                 "defaultValue": "(args: StockComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/traum.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TramComponent>",
+                "defaultValue": "(args: TramComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stops: stops\r\n  },\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/weather.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<WeatherComponent>",
+                "defaultValue": "(args: WeatherComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Tram",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/traum.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [
@@ -2645,6 +2831,38 @@
                     "defaultValue": "(args: ClockComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/weather.stories.ts": [
+                {
+                    "name": "Animated",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/weather.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Stay",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/weather.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/weather.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<WeatherComponent>",
+                    "defaultValue": "(args: WeatherComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/stories/stock.stories.ts": [
                 {
                     "name": "AppleAndMicrosoft",
@@ -2679,18 +2897,6 @@
                     "defaultValue": "{\r\n  production: true,\r\n  darkSkyApiKey: '00000',\r\n  yahooApiKey: '00000',\r\n  alphavantageKey: '00000'\r\n}"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -2701,6 +2907,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
                 }
             ],
             "src/environments/environment.default.ts": [
@@ -2829,6 +3047,38 @@
                     "deprecationMessage": "",
                     "type": "Story<Page>",
                     "defaultValue": "(args: Page) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/traum.stories.ts": [
+                {
+                    "name": "stops",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/traum.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  {\r\n      \"name\": \"Gabelsbergerstr.\",\r\n      \"monitor\": [\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:01:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:01:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": -1,\r\n              \"scheduledTimeRelative\": -1,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:05:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:05:00.000Z\",\r\n              \"id\": \"voe:11012: :H:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Leutewitz\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 3,\r\n              \"scheduledTimeRelative\": 3,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:15:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:15:00.000Z\",\r\n              \"id\": \"voe:11012: :R:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"2\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 13,\r\n              \"scheduledTimeRelative\": 13,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:16:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:16:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Striesen\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 14,\r\n              \"scheduledTimeRelative\": 14,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          }\r\n      ]\r\n  },\r\n  {\r\n      \"name\": \"Fetscherplatz\",\r\n      \"monitor\": [\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:03:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:03:00.000Z\",\r\n              \"id\": \"voe:21064: :R:j21\",\r\n              \"line\": \"64\",\r\n              \"direction\": \"Reick\",\r\n              \"platform\": {\r\n                  \"name\": \"7\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 1,\r\n              \"scheduledTimeRelative\": 1,\r\n              \"delayTime\": 0,\r\n              \"state\": \"InTime\",\r\n              \"mode\": {\r\n                  \"title\": \"Bus\",\r\n                  \"name\": \"CityBus\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-bus.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 21064,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11012: :H:j21\",\r\n              \"line\": \"12\",\r\n              \"direction\": \"Leutewitz\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11012,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11010: :H:j21\",\r\n              \"line\": \"10\",\r\n              \"direction\": \"Messe\",\r\n              \"platform\": {\r\n                  \"name\": \"1\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11010,\r\n                  \"network\": \"voe\"\r\n              }\r\n          },\r\n          {\r\n              \"arrivalTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"scheduledTime\": \"2021-10-21T19:07:00.000Z\",\r\n              \"id\": \"voe:11004: :R:j21\",\r\n              \"line\": \"4\",\r\n              \"direction\": \"Laubegast\",\r\n              \"platform\": {\r\n                  \"name\": \"2\",\r\n                  \"type\": \"Platform\"\r\n              },\r\n              \"arrivalTimeRelative\": 5,\r\n              \"scheduledTimeRelative\": 5,\r\n              \"delayTime\": 0,\r\n              \"state\": \"Cancelled\",\r\n              \"mode\": {\r\n                  \"title\": \"Straßenbahn\",\r\n                  \"name\": \"Tram\",\r\n                  \"iconUrl\": \"https://www.dvb.de/assets/img/trans-icon/transport-tram.svg\"\r\n              },\r\n              \"diva\": {\r\n                  \"number\": 11004,\r\n                  \"network\": \"voe\"\r\n              }\r\n          }\r\n      ]\r\n  }\r\n]"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/traum.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TramComponent>",
+                    "defaultValue": "(args: TramComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stops: stops\r\n  },\r\n})"
+                },
+                {
+                    "name": "Tram",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/traum.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ]
         },
@@ -2963,9 +3213,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "StockComponent",
-                "coveragePercent": 55,
-                "coverageCount": "11/20",
-                "status": "good"
+                "coveragePercent": 81,
+                "coverageCount": "18/22",
+                "status": "very-good"
             },
             {
                 "filePath": "src/app/widgets/tram/interfaces/dvb.ts",
@@ -3018,7 +3268,7 @@
                 "linktype": "component",
                 "name": "TramComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -3268,6 +3518,66 @@
             },
             {
                 "filePath": "src/stories/stock.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/traum.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "stops",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/traum.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/traum.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tram",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/weather.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Animated",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/weather.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Stay",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/weather.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

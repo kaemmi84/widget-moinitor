@@ -13,6 +13,10 @@ import {Subscription, timer} from "rxjs";
 export class AppComponent implements OnInit, OnDestroy{
 
   public stops: Stop[] = [];
+  public stopDescriptions: {
+    id:string,
+    name: string
+  }[] = [];
   public timeOffset = 0;
   public numberOfOpportunities = 4;
   public latitude: number = 0;
@@ -28,13 +32,15 @@ export class AppComponent implements OnInit, OnDestroy{
     timer(0,60000).subscribe(() => this.setTramSetup())
 
     //setup settings
-    this.timeOffset = AppConfig.settings.tram.timeOffset;
-    this.latitude = AppConfig.settings.weather.latitude;
-    this.longitude = AppConfig.settings.weather.longitude;
-    this.symbol = AppConfig.settings.stock.symbol;
-    this.interval = AppConfig.settings.stock.interval;
-    this.range = AppConfig.settings.stock.range;
-    this.mockData = AppConfig.settings.stock.mockData;
+    console.log('test', AppConfig.settings);
+    this.stopDescriptions = AppConfig.settings?.tram?.stops;
+    this.timeOffset = AppConfig.settings?.tram?.timeOffset;
+    this.latitude = AppConfig.settings?.weather?.latitude;
+    this.longitude = AppConfig.settings?.weather?.longitude;
+    this.symbol = AppConfig.settings?.stock?.symbol;
+    this.interval = AppConfig.settings?.stock?.interval;
+    this.range = AppConfig.settings?.stock?.range;
+    this.mockData = AppConfig.settings?.stock?.mockData;
   }
 
   ngOnDestroy(): void {
@@ -44,7 +50,7 @@ export class AppComponent implements OnInit, OnDestroy{
   private setTramSetup() {
     const promises: any = []
     this.stops = [];
-    AppConfig.settings.tram.stops.forEach(stop => {
+    this.stopDescriptions.forEach(stop => {
       promises.push(dvb.monitor(stop.id, this.timeOffset, this.numberOfOpportunities));
     });
     Promise.all(promises).then(stops => {
@@ -54,7 +60,7 @@ export class AppComponent implements OnInit, OnDestroy{
         this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');
 
         this.stops.push({
-          name: AppConfig.settings.tram.stops[index].name,
+          name: this.stopDescriptions[index].name,
           monitor: monitor as IMonitor[]
         })
       })
