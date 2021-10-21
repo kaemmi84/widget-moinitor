@@ -1,5 +1,4 @@
 @import "src/style/variable";
-
 .wrapper-stock {
   width: 100%;
   height: 100%;
@@ -15,15 +14,5 @@
     justify-content: space-around;
     align-items: center;
     font-size: 2em;
-
-    .stock-values {
-      .green {
-        color: green;
-      }
-
-      .red {
-        color: red;
-      }
-    }
   }
 }

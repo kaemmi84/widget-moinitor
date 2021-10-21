@@ -1,6 +1,6 @@
 <div class="wrapper-stock">
   <div class="stock" *ngFor="let symbol of symbolData">
-    <div class="chart">
+    <div class="chart" *ngIf="symbol">
       <canvas baseChart
         width="100"
         height="110"
@@ -20,7 +20,7 @@
       <div class="stock-current-price">
         {{symbol.currentPrice}}
       </div>
-      <div class="stock-relative-difference" [ngClass]="{'red': symbol.relativeDifference < 0, 'green': symbol.relativeDifference > 0}">
+      <div class="stock-relative-difference" [ngStyle]="{'color': symbol.relativeDifference > 0 ? positiveColor : negativeColor}">
         <ng-container *ngIf="symbol.relativeDifference > 0">+</ng-container>{{symbol.relativeDifference}}&thinsp;%
       </div>
     </div>

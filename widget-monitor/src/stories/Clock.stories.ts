@@ -37,6 +37,6 @@ const Template: Story<ClockComponent> = (args: ClockComponent) => ({
 
 export const Running = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-Morning.args = {
+Running.args = {
   timeIsRunning: true,
 };
