@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { moduleMetadata } from '@storybook/angular';
 import {Meta, Story} from '@storybook/angular/types-6-0';
 import { ChartsModule } from 'ng2-charts';
-import { StockComponent } from 'src/app/widgets/stock/stock.component';
+import {StockComponent} from "../app/widgets/stock/stock.component";
 
 export default {
   title: 'WidgetMonitor/Stock',
@@ -10,7 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [StockComponent],
-      imports: [ 
+      imports: [
         HttpClientModule,
         ChartsModule
        ]
@@ -30,7 +30,7 @@ export default {
     range: {
       options: ['1d', '5d', '1mo', '3mo', '6mo', '1y', '5y', 'max'],
       control: { type: 'radio' }
-      
+
     },
     positiveColor: { control: 'color' },
     negativeColor: { control: 'color' },

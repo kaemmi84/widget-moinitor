@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { moduleMetadata } from '@storybook/angular';
 import {Meta, Story} from '@storybook/angular/types-6-0';
-import { WeatherComponent } from 'src/app/widgets/weather/weather.component';
+import {WeatherComponent} from "../app/widgets/weather/weather.component";
 
 export default {
   title: 'WidgetMonitor/Weather',
@@ -10,7 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [WeatherComponent],
-      imports: [ 
+      imports: [
         HttpClientModule,
        ]
     }),

@@ -1,5 +1,6 @@
 import {Meta, Story} from '@storybook/angular/types-6-0';
-import { TramComponent } from 'src/app/widgets/tram/tram.component';
+import {TramComponent} from "../app/widgets/tram/tram.component";
+
 
 const stops = [
   {

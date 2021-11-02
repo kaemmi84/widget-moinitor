@@ -2,11 +2,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import {Meta, Story} from '@storybook/angular/types-6-0';
 import { ChartsModule } from 'ng2-charts';
-import { AppComponent } from 'src/app/app.component';
-import { StockComponent } from 'src/app/widgets/stock/stock.component';
-import { TramComponent } from 'src/app/widgets/tram/tram.component';
-import { WeatherComponent } from 'src/app/widgets/weather/weather.component';
 import {ClockComponent} from "../app/widgets/clock/clock.component";
+import {AppComponent} from "../app/app.component";
+import {StockComponent} from "../app/widgets/stock/stock.component";
+import {WeatherComponent} from "../app/widgets/weather/weather.component";
+import {TramComponent} from "../app/widgets/tram/tram.component";
 
 export default {
   title: 'WidgetMonitor/Dashboard',
@@ -34,7 +34,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [AppComponent, StockComponent, WeatherComponent, TramComponent, ClockComponent],
-      imports: [ 
+      imports: [
         HttpClientModule,
         ChartsModule
        ]
