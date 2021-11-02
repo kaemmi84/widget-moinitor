@@ -1,10 +1,9 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {ChartDataSets, ChartOptions, ChartType} from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import {Color, Label} from 'ng2-charts';
 import {StockService} from "./service/stock.service";
 import {Observable, timer} from "rxjs";
-import { StockAvService } from './service/stock.av.service';
-import { SymbolData } from './interfaces/symbol';
+import {SymbolData} from './interfaces/symbol';
 
 @Component({
   selector: 'app-stock',
@@ -23,7 +22,7 @@ export class StockComponent implements OnInit, OnChanges {
    */
   @Input() symbols: string = 'NDAQ'
   /**
-   * Interval for Stock 
+   * Interval for Stock
    * Options: 1m 5m 15m 1d 1wk 1mo
    */
   @Input() interval: string = '1d'
@@ -45,7 +44,7 @@ export class StockComponent implements OnInit, OnChanges {
    * Only Symbols AAPL, MSFT available
    */
    @Input() positiveColor: string = 'green';
-   
+
 
   /**
    * Mock data for Stock
@@ -61,7 +60,7 @@ export class StockComponent implements OnInit, OnChanges {
   ];
 
   /**
-   * Labels shown on the x-axis 
+   * Labels shown on the x-axis
    */
   lineChartLabels: Label[] = [];
 
@@ -129,10 +128,9 @@ export class StockComponent implements OnInit, OnChanges {
 
   constructor(
     private stockService: StockService,
-    private stockAvService: StockAvService
   ) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.getStock();
   }
 
@@ -146,10 +144,9 @@ export class StockComponent implements OnInit, OnChanges {
    * @returns Chartdata for chart.js
    */
   public getLineChartData(data: number[]) {
-    const lineChartData = [
-      { data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0 },
+    return [
+      {data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0},
     ];
-    return lineChartData;
   }
 
   /**
@@ -193,7 +190,7 @@ export class StockComponent implements OnInit, OnChanges {
 
   /**
    * Helping service to choose Mock or Live Data
-   * @returns 
+   * @returns
    */
   private getService(): Observable<Object> {
     return this.mockData

@@ -12,11 +12,11 @@ export default {
       declarations: [StockComponent],
       imports: [
         HttpClientModule,
-        ChartsModule
+        ChartsModule,
        ]
     }),
   ],
-  mockdata: true,
+  mockData: true,
   symbols: 'AAPL,MSFT,AAPL',
   interval: '1d',
   range: '1mo',
@@ -25,16 +25,15 @@ export default {
   argTypes: {
     interval: {
       options: ['1m', '5m', '15m', '1d', '1wk', '1mo'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
     },
     range: {
       options: ['1d', '5d', '1mo', '3mo', '6mo', '1y', '5y', 'max'],
-      control: { type: 'radio' }
-
+      control: { type: 'radio' },
     },
     positiveColor: { control: 'color' },
     negativeColor: { control: 'color' },
-  }
+  },
 } as Meta;
 
 const Template: Story<StockComponent> = (args: StockComponent) => ({

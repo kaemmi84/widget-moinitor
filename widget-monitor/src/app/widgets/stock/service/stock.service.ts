@@ -8,7 +8,7 @@ import { of } from 'rxjs';
 })
 export class StockService {
 
-  private api = `https://rest.yahoofinanceapi.com`;
+  private api = `https://yfapi.net`;
 
   constructor(
     private http: HttpClient
