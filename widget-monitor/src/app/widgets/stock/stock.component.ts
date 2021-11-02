@@ -37,7 +37,7 @@ export class StockComponent implements OnInit, OnChanges {
    * Mock data for Stock
    * Only Symbols AAPL, MSFT available
    */
-  @Input() mockData: boolean = false;
+  @Input() mockData: boolean = true;
 
   /**
    * Mock data for Stock
@@ -131,7 +131,9 @@ export class StockComponent implements OnInit, OnChanges {
   ) { }
 
   ngOnChanges(): void {
-    this.getStock();
+    if(this.mockData !== undefined) {
+      this.getStock();
+    }
   }
 
   ngOnInit(): void {
@@ -169,6 +171,7 @@ export class StockComponent implements OnInit, OnChanges {
        .subscribe((result: any) => {
       this.symbolData = [];
       this.symbols.split(',').forEach((symbol: string) => {
+        if (!result[symbol]) return;
         this.symbolData.push(
           {
             name: symbol.slice(0,4),

@@ -32,7 +32,6 @@ export class AppComponent implements OnInit, OnDestroy{
     timer(0,60000).subscribe(() => this.setTramSetup())
 
     //setup settings
-    console.log('test', AppConfig.settings);
     this.stopDescriptions = AppConfig.settings?.tram?.stops;
     this.timeOffset = AppConfig.settings?.tram?.timeOffset;
     this.latitude = AppConfig.settings?.weather?.latitude;

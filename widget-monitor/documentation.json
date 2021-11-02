@@ -518,12 +518,12 @@
         },
         {
             "name": "StockService",
-            "id": "injectable-StockService-382afcd1476817ccfd01d21f131d8e22",
+            "id": "injectable-StockService-f0060f6008dbecfc1d03600b7500bcc2",
             "file": "src/app/widgets/stock/service/stock.service.ts",
             "properties": [
                 {
                     "name": "api",
-                    "defaultValue": "`https://rest.yahoofinanceapi.com`",
+                    "defaultValue": "`https://yfapi.net`",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -613,7 +613,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport {environment} from \"../../../../environments/environment\";\r\nimport {HttpClient} from \"@angular/common/http\";\r\nimport { of } from 'rxjs';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class StockService {\r\n\r\n  private api = `https://rest.yahoofinanceapi.com`;\r\n\r\n  constructor(\r\n    private http: HttpClient\r\n  ) { }\r\n\r\n  getSpark(symbols: string, interval = '1d', range = '1mo') {\r\n    return this.http.get(\r\n      `${this.api}/v8/finance/spark`,\r\n      {\r\n        headers: {\r\n          'x-api-key': environment.yahooApiKey\r\n        },\r\n        params: {\r\n          symbols: symbols,\r\n          interval: interval,\r\n          range: range\r\n        }\r\n      });\r\n  }\r\n\r\n  getSparkMock() {\r\n    return of({\r\n      \"MSFT\": {\r\n        \"previousClose\": null,\r\n        \"symbol\": \"MSFT\",\r\n        \"chartPreviousClose\": 252.46,\r\n        \"timestamp\": [\r\n          1620653400,\r\n          1620739800,\r\n          1620826200,\r\n          1620912600,\r\n          1620999000,\r\n          1621258200,\r\n          1621344600,\r\n          1621431000,\r\n          1621517400,\r\n          1621603800,\r\n          1621863000,\r\n          1621949400,\r\n          1622035800,\r\n          1622122200,\r\n          1622208600,\r\n          1622554200,\r\n          1622640600,\r\n          1622727000,\r\n          1622813400,\r\n          1623072600,\r\n          1623182402\r\n        ],\r\n        \"close\": [\r\n          247.18,\r\n          246.23,\r\n          239,\r\n          243.03,\r\n          248.15,\r\n          245.18,\r\n          243.08,\r\n          243.12,\r\n          246.48,\r\n          245.17,\r\n          250.78,\r\n          251.72,\r\n          251.49,\r\n          249.31,\r\n          249.68,\r\n          247.4,\r\n          247.3,\r\n          245.71,\r\n          250.79,\r\n          253.81,\r\n          252.57\r\n        ],\r\n        \"end\": null,\r\n        \"start\": null,\r\n        \"dataGranularity\": 300\r\n      },\r\n      \"AAPL\": {\r\n        \"previousClose\": null,\r\n        \"symbol\": \"AAPL\",\r\n        \"chartPreviousClose\": 130.21,\r\n        \"timestamp\": [\r\n          1620653400,\r\n          1620739800,\r\n          1620826200,\r\n          1620912600,\r\n          1620999000,\r\n          1621258200,\r\n          1621344600,\r\n          1621431000,\r\n          1621517400,\r\n          1621603800,\r\n          1621863000,\r\n          1621949400,\r\n          1622035800,\r\n          1622122200,\r\n          1622208600,\r\n          1622554200,\r\n          1622640600,\r\n          1622727000,\r\n          1622813400,\r\n          1623072600,\r\n          1623182403\r\n        ],\r\n        \"close\": [\r\n          126.85,\r\n          125.91,\r\n          122.77,\r\n          124.97,\r\n          127.45,\r\n          126.27,\r\n          124.85,\r\n          124.69,\r\n          127.31,\r\n          125.43,\r\n          127.1,\r\n          126.9,\r\n          126.85,\r\n          125.28,\r\n          124.61,\r\n          124.28,\r\n          125.06,\r\n          123.54,\r\n          125.89,\r\n          125.9,\r\n          126.74\r\n        ],\r\n        \"end\": null,\r\n        \"start\": null,\r\n        \"dataGranularity\": 300\r\n      }\r\n    })\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport {environment} from \"../../../../environments/environment\";\r\nimport {HttpClient} from \"@angular/common/http\";\r\nimport { of } from 'rxjs';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class StockService {\r\n\r\n  private api = `https://yfapi.net`;\r\n\r\n  constructor(\r\n    private http: HttpClient\r\n  ) { }\r\n\r\n  getSpark(symbols: string, interval = '1d', range = '1mo') {\r\n    return this.http.get(\r\n      `${this.api}/v8/finance/spark`,\r\n      {\r\n        headers: {\r\n          'x-api-key': environment.yahooApiKey\r\n        },\r\n        params: {\r\n          symbols: symbols,\r\n          interval: interval,\r\n          range: range\r\n        }\r\n      });\r\n  }\r\n\r\n  getSparkMock() {\r\n    return of({\r\n      \"MSFT\": {\r\n        \"previousClose\": null,\r\n        \"symbol\": \"MSFT\",\r\n        \"chartPreviousClose\": 252.46,\r\n        \"timestamp\": [\r\n          1620653400,\r\n          1620739800,\r\n          1620826200,\r\n          1620912600,\r\n          1620999000,\r\n          1621258200,\r\n          1621344600,\r\n          1621431000,\r\n          1621517400,\r\n          1621603800,\r\n          1621863000,\r\n          1621949400,\r\n          1622035800,\r\n          1622122200,\r\n          1622208600,\r\n          1622554200,\r\n          1622640600,\r\n          1622727000,\r\n          1622813400,\r\n          1623072600,\r\n          1623182402\r\n        ],\r\n        \"close\": [\r\n          247.18,\r\n          246.23,\r\n          239,\r\n          243.03,\r\n          248.15,\r\n          245.18,\r\n          243.08,\r\n          243.12,\r\n          246.48,\r\n          245.17,\r\n          250.78,\r\n          251.72,\r\n          251.49,\r\n          249.31,\r\n          249.68,\r\n          247.4,\r\n          247.3,\r\n          245.71,\r\n          250.79,\r\n          253.81,\r\n          252.57\r\n        ],\r\n        \"end\": null,\r\n        \"start\": null,\r\n        \"dataGranularity\": 300\r\n      },\r\n      \"AAPL\": {\r\n        \"previousClose\": null,\r\n        \"symbol\": \"AAPL\",\r\n        \"chartPreviousClose\": 130.21,\r\n        \"timestamp\": [\r\n          1620653400,\r\n          1620739800,\r\n          1620826200,\r\n          1620912600,\r\n          1620999000,\r\n          1621258200,\r\n          1621344600,\r\n          1621431000,\r\n          1621517400,\r\n          1621603800,\r\n          1621863000,\r\n          1621949400,\r\n          1622035800,\r\n          1622122200,\r\n          1622208600,\r\n          1622554200,\r\n          1622640600,\r\n          1622727000,\r\n          1622813400,\r\n          1623072600,\r\n          1623182403\r\n        ],\r\n        \"close\": [\r\n          126.85,\r\n          125.91,\r\n          122.77,\r\n          124.97,\r\n          127.45,\r\n          126.27,\r\n          124.85,\r\n          124.69,\r\n          127.31,\r\n          125.43,\r\n          127.1,\r\n          126.9,\r\n          126.85,\r\n          125.28,\r\n          124.61,\r\n          124.28,\r\n          125.06,\r\n          123.54,\r\n          125.89,\r\n          125.9,\r\n          126.74\r\n        ],\r\n        \"end\": null,\r\n        \"start\": null,\r\n        \"dataGranularity\": 300\r\n      }\r\n    })\r\n  }\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -747,7 +747,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-df46d46ced543d3c7a7e2ef96cdd3763",
+            "id": "component-AppComponent-3280aa7f86c8e91bcbe5ba7dd569a647",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -774,7 +774,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 21,
+                    "line": 25,
                     "modifierKind": [
                         123
                     ]
@@ -787,7 +787,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 18,
+                    "line": 22,
                     "modifierKind": [
                         123
                     ]
@@ -800,7 +800,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 19,
+                    "line": 23,
                     "modifierKind": [
                         123
                     ]
@@ -813,7 +813,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 23,
+                    "line": 27,
                     "modifierKind": [
                         123
                     ]
@@ -826,7 +826,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 17,
+                    "line": 21,
                     "modifierKind": [
                         123
                     ]
@@ -839,7 +839,20 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 22,
+                    "line": 26,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "stopDescriptions",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
                     "modifierKind": [
                         123
                     ]
@@ -865,7 +878,7 @@
                     "type": "Subscription",
                     "optional": false,
                     "description": "",
-                    "line": 25,
+                    "line": 29,
                     "modifierKind": [
                         123
                     ]
@@ -878,7 +891,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 20,
+                    "line": 24,
                     "modifierKind": [
                         123
                     ]
@@ -891,7 +904,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 16,
+                    "line": 20,
                     "modifierKind": [
                         123
                     ]
@@ -904,7 +917,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 40,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -914,7 +927,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -924,7 +937,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 44,
+                    "line": 50,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -956,7 +969,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 72,
+                    "line": 78,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nworkaround shorten of direction name\n",
@@ -967,8 +980,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 2146,
-                                "end": 2153,
+                                "pos": 2329,
+                                "end": 2336,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -979,8 +992,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2140,
-                                "end": 2145,
+                                "pos": 2323,
+                                "end": 2328,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -991,8 +1004,8 @@
                         },
                         {
                             "name": {
-                                "pos": 2167,
-                                "end": 2175,
+                                "pos": 2350,
+                                "end": 2358,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1003,8 +1016,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2161,
-                                "end": 2166,
+                                "pos": 2344,
+                                "end": 2349,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1015,8 +1028,8 @@
                         },
                         {
                             "name": {
-                                "pos": 2189,
-                                "end": 2198,
+                                "pos": 2372,
+                                "end": 2381,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1027,8 +1040,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2183,
-                                "end": 2188,
+                                "pos": 2366,
+                                "end": 2371,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1039,8 +1052,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 2225,
-                                "end": 2232,
+                                "pos": 2408,
+                                "end": 2415,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1077,7 +1090,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 89,
+                    "line": 95,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nworkaround shorten of direction name contains\n",
@@ -1088,8 +1101,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 2653,
-                                "end": 2660,
+                                "pos": 2836,
+                                "end": 2843,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1100,8 +1113,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2647,
-                                "end": 2652,
+                                "pos": 2830,
+                                "end": 2835,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1112,8 +1125,8 @@
                         },
                         {
                             "name": {
-                                "pos": 2674,
-                                "end": 2682,
+                                "pos": 2857,
+                                "end": 2865,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1124,8 +1137,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2668,
-                                "end": 2673,
+                                "pos": 2851,
+                                "end": 2856,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1136,8 +1149,8 @@
                         },
                         {
                             "name": {
-                                "pos": 2696,
-                                "end": 2705,
+                                "pos": 2879,
+                                "end": 2888,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1148,8 +1161,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2690,
-                                "end": 2695,
+                                "pos": 2873,
+                                "end": 2878,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1160,8 +1173,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 2732,
-                                "end": 2739,
+                                "pos": 2915,
+                                "end": 2922,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1181,7 +1194,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, OnDestroy, OnInit} from '@angular/core';\r\nimport * as dvb from \"dvbjs\";\r\nimport {AppConfig} from \"./app-config\";\r\nimport {Stop} from \"./widgets/tram/interfaces/dvb\";\r\nimport {IMonitor} from \"dvbjs\";\r\nimport {Subscription, timer} from \"rxjs\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent implements OnInit, OnDestroy{\r\n\r\n  public stops: Stop[] = [];\r\n  public timeOffset = 0;\r\n  public numberOfOpportunities = 4;\r\n  public latitude: number = 0;\r\n  public longitude: number = 0;\r\n  public symbol: string = 'NDAQ';\r\n  public interval: string = '1d';\r\n  public range: string = '1mo';\r\n  public mockData: boolean = true;\r\n\r\n  public subscription: Subscription = new Subscription();\r\n\r\n  ngOnInit(): void {\r\n    timer(0,60000).subscribe(() => this.setTramSetup())\r\n\r\n    //setup settings\r\n    this.timeOffset = AppConfig.settings.tram.timeOffset;\r\n    this.latitude = AppConfig.settings.weather.latitude;\r\n    this.longitude = AppConfig.settings.weather.longitude;\r\n    this.symbol = AppConfig.settings.stock.symbol;\r\n    this.interval = AppConfig.settings.stock.interval;\r\n    this.range = AppConfig.settings.stock.range;\r\n    this.mockData = AppConfig.settings.stock.mockData;\r\n  }\r\n\r\n  ngOnDestroy(): void {\r\n    this.subscription.unsubscribe();\r\n  }\r\n\r\n  private setTramSetup() {\r\n    const promises: any = []\r\n    this.stops = [];\r\n    AppConfig.settings.tram.stops.forEach(stop => {\r\n      promises.push(dvb.monitor(stop.id, this.timeOffset, this.numberOfOpportunities));\r\n    });\r\n    Promise.all(promises).then(stops => {\r\n      stops.forEach((monitor, index) => {\r\n        this.ShortDestinationsContains(monitor, 'kaditz', 'Kaditz');\r\n        this.ShortDestinationsContains(monitor, 'messe', 'Messe');\r\n        this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');\r\n\r\n        this.stops.push({\r\n          name: AppConfig.settings.tram.stops[index].name,\r\n          monitor: monitor as IMonitor[]\r\n        })\r\n      })\r\n    });\r\n  }\r\n\r\n  /**\r\n   * workaround shorten of direction name\r\n   * @param monitor\r\n   * @param longName\r\n   * @param shortName\r\n   * @constructor\r\n   * @private\r\n   */\r\n  private ShortDestinations(monitor: any, longName: string, shortName:string) {\r\n    const destinations = (monitor as IMonitor[])\r\n      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim() === longName.toLowerCase().trim());\r\n    destinations.forEach(destination => {\r\n      destination.direction = shortName;\r\n    });\r\n  }\r\n\r\n\r\n  /**\r\n   * workaround shorten of direction name contains\r\n   * @param monitor\r\n   * @param contains\r\n   * @param shortName\r\n   * @constructor\r\n   * @private\r\n   */\r\n   private ShortDestinationsContains(monitor: any, contains: string, shortName:string) {\r\n    const destinations = (monitor as IMonitor[])\r\n      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim().includes(contains.toLowerCase().trim()));\r\n    destinations.forEach(destination => {\r\n      destination.direction = shortName;\r\n    });\r\n  }\r\n}\r\n",
+            "sourceCode": "import {Component, OnDestroy, OnInit} from '@angular/core';\r\nimport * as dvb from \"dvbjs\";\r\nimport {AppConfig} from \"./app-config\";\r\nimport {Stop} from \"./widgets/tram/interfaces/dvb\";\r\nimport {IMonitor} from \"dvbjs\";\r\nimport {Subscription, timer} from \"rxjs\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent implements OnInit, OnDestroy{\r\n\r\n  public stops: Stop[] = [];\r\n  public stopDescriptions: {\r\n    id:string,\r\n    name: string\r\n  }[] = [];\r\n  public timeOffset = 0;\r\n  public numberOfOpportunities = 4;\r\n  public latitude: number = 0;\r\n  public longitude: number = 0;\r\n  public symbol: string = 'NDAQ';\r\n  public interval: string = '1d';\r\n  public range: string = '1mo';\r\n  public mockData: boolean = true;\r\n\r\n  public subscription: Subscription = new Subscription();\r\n\r\n  ngOnInit(): void {\r\n    timer(0,60000).subscribe(() => this.setTramSetup())\r\n\r\n    //setup settings\r\n    console.log('test', AppConfig.settings);\r\n    this.stopDescriptions = AppConfig.settings?.tram?.stops;\r\n    this.timeOffset = AppConfig.settings?.tram?.timeOffset;\r\n    this.latitude = AppConfig.settings?.weather?.latitude;\r\n    this.longitude = AppConfig.settings?.weather?.longitude;\r\n    this.symbol = AppConfig.settings?.stock?.symbol;\r\n    this.interval = AppConfig.settings?.stock?.interval;\r\n    this.range = AppConfig.settings?.stock?.range;\r\n    this.mockData = AppConfig.settings?.stock?.mockData;\r\n  }\r\n\r\n  ngOnDestroy(): void {\r\n    this.subscription.unsubscribe();\r\n  }\r\n\r\n  private setTramSetup() {\r\n    const promises: any = []\r\n    this.stops = [];\r\n    this.stopDescriptions.forEach(stop => {\r\n      promises.push(dvb.monitor(stop.id, this.timeOffset, this.numberOfOpportunities));\r\n    });\r\n    Promise.all(promises).then(stops => {\r\n      stops.forEach((monitor, index) => {\r\n        this.ShortDestinationsContains(monitor, 'kaditz', 'Kaditz');\r\n        this.ShortDestinationsContains(monitor, 'messe', 'Messe');\r\n        this.ShortDestinations(monitor, 'bischofswerda bahnhof', 'Bischofswerda');\r\n\r\n        this.stops.push({\r\n          name: this.stopDescriptions[index].name,\r\n          monitor: monitor as IMonitor[]\r\n        })\r\n      })\r\n    });\r\n  }\r\n\r\n  /**\r\n   * workaround shorten of direction name\r\n   * @param monitor\r\n   * @param longName\r\n   * @param shortName\r\n   * @constructor\r\n   * @private\r\n   */\r\n  private ShortDestinations(monitor: any, longName: string, shortName:string) {\r\n    const destinations = (monitor as IMonitor[])\r\n      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim() === longName.toLowerCase().trim());\r\n    destinations.forEach(destination => {\r\n      destination.direction = shortName;\r\n    });\r\n  }\r\n\r\n\r\n  /**\r\n   * workaround shorten of direction name contains\r\n   * @param monitor\r\n   * @param contains\r\n   * @param shortName\r\n   * @constructor\r\n   * @private\r\n   */\r\n   private ShortDestinationsContains(monitor: any, contains: string, shortName:string) {\r\n    const destinations = (monitor as IMonitor[])\r\n      .filter((m: IMonitor) => m.direction.toLocaleLowerCase().trim().includes(contains.toLowerCase().trim()));\r\n    destinations.forEach(destination => {\r\n      destination.direction = shortName;\r\n    });\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1195,126 +1208,6 @@
                 "OnDestroy"
             ],
             "templateData": "<div class=\"wrapper-widgets\">\r\n  <app-clock\r\n    [timeIsRunning]=\"true\"\r\n  ></app-clock>\r\n  <app-weather\r\n    [latitude]=\"latitude\"\r\n    [longitude]=\"longitude\"\r\n    [animateGraphics]=\"true\"\r\n  ></app-weather>\r\n  <app-tram\r\n    [stops]=\"stops\"\r\n    [timeOffset]=\"timeOffset\"\r\n    [numberOfOpportunities]=\"numberOfOpportunities\"></app-tram>\r\n  <app-stock\r\n    [symbols]=\"symbol\"\r\n    [interval]=\"interval\"\r\n    [range]=\"range\"\r\n    [mockData]=\"mockData\"\r\n    positiveColor=\"green\"\r\n    negativeColor=\"red\"\r\n  ></app-stock>\r\n</div>\r\n\r\n"
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-44f2f1e1b3a1e0ebc1e0edafd90d05c0",
-            "file": "src/stories/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "What background color to use",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 26,
-                    "type": "string"
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 747,
-                            "end": 761,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 322,
-                            "tagName": {
-                                "pos": 748,
-                                "end": 756,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "Button contents",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 40,
-                    "type": "string"
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "Is this the principal call to action on the page?",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 20,
-                    "type": "boolean"
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "How large should the button be?",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 32,
-                    "type": "\"small\" | \"medium\" | \"large\""
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 46,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 48
-                    }
-                }
-            }
         },
         {
             "name": "ClockComponent",
@@ -1496,152 +1389,8 @@
             "templateData": "<div class=\"wrapper-clock\">\r\n  <div class=\"time-clock\">\r\n    {{time | date:'H:mm'}}\r\n  </div>\r\n  <div class=\"day-ticker\">\r\n    <div>\r\n      {{time | date:'d.M'}}\r\n    </div>\r\n    <div>\r\n      {{time | date:'E'}}\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-c349aa42f2121da4b5737d60a50fa413",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 53,
-                    "type": ""
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 62,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 56,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 59,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"wrapper\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <storybook-button\r\n          *ngIf=\"user\"\r\n          size=\"small\"\r\n          (onClick)=\"onLogout.emit($event)\"\r\n          label=\"Log out\"\r\n        ></storybook-button>\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          (onClick)=\"onLogin.emit($event)\"\r\n          label=\"Log in\"\r\n        ></storybook-button>\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          primary\r\n          size=\"small\"\r\n          (onClick)=\"onCreateAccount.emit($event)\"\r\n          label=\"Sign up\"\r\n        ></storybook-button>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: unknown = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".wrapper {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\nsvg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nh1 {\r\n  font-weight: 900;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\nbutton + button {\r\n  margin-left: 10px;\r\n}\r\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-458a0bd074cddd3932cfcb5b086aeb0d",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 64,
-                    "type": ""
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 73,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 67,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 70,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n    <storybook-header\r\n      [user]=\"user\"\r\n      (onLogout)=\"onLogout.emit($event)\"\r\n      (onLogin)=\"onLogin.emit($event)\"\r\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\r\n    ></storybook-header>\r\n    <section>\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  @Input()\r\n  user: unknown = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n\r\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\r\n//   <article>\r\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\r\n\r\n// );\r\n// Page.propTypes = {\r\n//   user: PropTypes.shape({}),\r\n//   onLogin: PropTypes.func.isRequired,\r\n//   onLogout: PropTypes.func.isRequired,\r\n//   onCreateAccount: PropTypes.func.isRequired,\r\n// };\r\n\r\n// Page.defaultProps = {\r\n//   user: null,\r\n// };\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "section {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\nh2 {\r\n  font-weight: 900;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\np {\r\n  margin: 1em 0;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\nul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\nli {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
             "name": "StockComponent",
-            "id": "component-StockComponent-8d6d8652bf3312ec89136c9716b82538",
+            "id": "component-StockComponent-1b820283fff269e734d17747e11f7fcf",
             "file": "src/app/widgets/stock/stock.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1663,9 +1412,9 @@
                     "defaultValue": "'1d'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "Interval for Stock \r\nOptions: 1m 5m 15m 1d 1wk 1mo",
-                    "description": "<p>Interval for Stock \nOptions: 1m 5m 15m 1d 1wk 1mo</p>\n",
-                    "line": 29,
+                    "rawdescription": "Interval for Stock\r\nOptions: 1m 5m 15m 1d 1wk 1mo",
+                    "description": "<p>Interval for Stock\nOptions: 1m 5m 15m 1d 1wk 1mo</p>\n",
+                    "line": 28,
                     "type": "string"
                 },
                 {
@@ -1675,7 +1424,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
                     "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
-                    "line": 41,
+                    "line": 40,
                     "type": "boolean"
                 },
                 {
@@ -1685,7 +1434,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
                     "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
-                    "line": 54,
+                    "line": 53,
                     "type": "string"
                 },
                 {
@@ -1695,7 +1444,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Mock data for Stock\r\nOnly Symbols AAPL, MSFT available",
                     "description": "<p>Mock data for Stock\nOnly Symbols AAPL, MSFT available</p>\n",
-                    "line": 47,
+                    "line": 46,
                     "type": "string"
                 },
                 {
@@ -1705,7 +1454,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Range of Stock\r\nOptions: 1d 5d 1mo 3mo 6mo 1y 5y max",
                     "description": "<p>Range of Stock\nOptions: 1d 5d 1mo 3mo 6mo 1y 5y max</p>\n",
-                    "line": 35,
+                    "line": 34,
                     "type": "string"
                 },
                 {
@@ -1715,7 +1464,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "Symbols for stock",
                     "description": "<p>Symbols for stock</p>\n",
-                    "line": 24,
+                    "line": 23,
                     "type": "string"
                 }
             ],
@@ -1729,7 +1478,7 @@
                     "type": "Color[]",
                     "optional": false,
                     "description": "<p>Define colors of chart segments</p>\n",
-                    "line": 108,
+                    "line": 107,
                     "rawdescription": "\n\nDefine colors of chart segments\n"
                 },
                 {
@@ -1740,7 +1489,7 @@
                     "type": "ChartDataSets[]",
                     "optional": false,
                     "description": "<p>Array of different segments in chart</p>\n",
-                    "line": 59,
+                    "line": 58,
                     "rawdescription": "\n\nArray of different segments in chart\n"
                 },
                 {
@@ -1751,7 +1500,7 @@
                     "type": "Label[]",
                     "optional": false,
                     "description": "<p>Labels shown on the x-axis</p>\n",
-                    "line": 66,
+                    "line": 65,
                     "rawdescription": "\n\nLabels shown on the x-axis\n"
                 },
                 {
@@ -1762,7 +1511,7 @@
                     "type": "",
                     "optional": false,
                     "description": "<p>Set true to show legends</p>\n",
-                    "line": 118,
+                    "line": 117,
                     "rawdescription": "\n\nSet true to show legends\n"
                 },
                 {
@@ -1773,7 +1522,7 @@
                     "type": "ChartOptions",
                     "optional": false,
                     "description": "<p>Define chart options</p>\n",
-                    "line": 71,
+                    "line": 70,
                     "rawdescription": "\n\nDefine chart options\n"
                 },
                 {
@@ -1784,7 +1533,7 @@
                     "type": "[]",
                     "optional": false,
                     "description": "<p>Plugins for Chart.</p>\n",
-                    "line": 128,
+                    "line": 127,
                     "rawdescription": "\n\nPlugins for Chart.\n"
                 },
                 {
@@ -1795,7 +1544,7 @@
                     "type": "ChartType",
                     "optional": false,
                     "description": "<p>Define type of chart</p>\n",
-                    "line": 123,
+                    "line": 122,
                     "rawdescription": "\n\nDefine type of chart\n"
                 },
                 {
@@ -1806,7 +1555,7 @@
                     "type": "SymbolData[]",
                     "optional": false,
                     "description": "<p>Array of symbol informations for chart.js</p>\n",
-                    "line": 19,
+                    "line": 18,
                     "rawdescription": "\n\nArray of symbol informations for chart.js\n",
                     "modifierKind": [
                         123
@@ -1827,7 +1576,7 @@
                     "optional": false,
                     "returnType": "{}",
                     "typeParameters": [],
-                    "line": 148,
+                    "line": 146,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nReturn Chartdata for Y axes\n",
@@ -1838,8 +1587,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 2997,
-                                "end": 3001,
+                                "pos": 2845,
+                                "end": 2849,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1850,8 +1599,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 2991,
-                                "end": 2996,
+                                "pos": 2839,
+                                "end": 2844,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1862,8 +1611,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 3026,
-                                "end": 3033,
+                                "pos": 2874,
+                                "end": 2881,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1887,7 +1636,7 @@
                     "optional": false,
                     "returnType": "number",
                     "typeParameters": [],
-                    "line": 160,
+                    "line": 157,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nCalculate the differnce between beginn and end of the stockchart\n",
@@ -1898,8 +1647,8 @@
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 3358,
-                                "end": 3364,
+                                "pos": 3162,
+                                "end": 3168,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1910,8 +1659,8 @@
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
-                                "pos": 3352,
-                                "end": 3357,
+                                "pos": 3156,
+                                "end": 3161,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1922,8 +1671,8 @@
                         },
                         {
                             "tagName": {
-                                "pos": 3392,
-                                "end": 3399,
+                                "pos": 3196,
+                                "end": 3203,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1940,7 +1689,7 @@
                     "optional": false,
                     "returnType": "Observable<Object>",
                     "typeParameters": [],
-                    "line": 198,
+                    "line": 195,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nHelping service to choose Mock or Live Data\n",
@@ -1951,8 +1700,8 @@
                     "jsdoctags": [
                         {
                             "tagName": {
-                                "pos": 4607,
-                                "end": 4614,
+                                "pos": 4411,
+                                "end": 4418,
                                 "flags": 4227072,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -1969,7 +1718,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 170,
+                    "line": 167,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "rawdescription": "\n\nGet Stock from Yahoo Api or Mockdata\n",
@@ -1980,31 +1729,13 @@
                 },
                 {
                     "name": "ngOnChanges",
-                    "args": [
-                        {
-                            "name": "changes",
-                            "type": "SimpleChanges",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
+                    "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 135,
+                    "line": 133,
                     "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "changes",
-                            "type": "SimpleChanges",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
+                    "deprecationMessage": ""
                 },
                 {
                     "name": "ngOnInit",
@@ -2012,7 +1743,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 139,
+                    "line": 137,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2024,7 +1755,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';\r\nimport {ChartDataSets, ChartOptions, ChartType} from 'chart.js';\r\nimport { Color, Label } from 'ng2-charts';\r\nimport {StockService} from \"./service/stock.service\";\r\nimport {Observable, timer} from \"rxjs\";\r\nimport { StockAvService } from './service/stock.av.service';\r\nimport { SymbolData } from './interfaces/symbol';\r\n\r\n@Component({\r\n  selector: 'app-stock',\r\n  templateUrl: './stock.component.html',\r\n  styleUrls: ['./stock.component.scss']\r\n})\r\nexport class StockComponent implements OnInit, OnChanges {\r\n\r\n  /**\r\n   * Array of symbol informations for chart.js\r\n   */\r\n  public symbolData: SymbolData[] = [];\r\n\r\n  /**\r\n   * Symbols for stock\r\n   */\r\n  @Input() symbols: string = 'NDAQ'\r\n  /**\r\n   * Interval for Stock \r\n   * Options: 1m 5m 15m 1d 1wk 1mo\r\n   */\r\n  @Input() interval: string = '1d'\r\n\r\n  /**\r\n   * Range of Stock\r\n   * Options: 1d 5d 1mo 3mo 6mo 1y 5y max\r\n   */\r\n  @Input() range: string = '1mo'\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n  @Input() mockData: boolean = false;\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() positiveColor: string = 'green';\r\n   \r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() negativeColor: string = 'red';\r\n\r\n  /**\r\n   * Array of different segments in chart\r\n   */\r\n  lineChartData: ChartDataSets[] = [\r\n    { data: [], label: 'Curse', pointRadius: 0, borderWidth: 0, lineTension: 0 },\r\n  ];\r\n\r\n  /**\r\n   * Labels shown on the x-axis \r\n   */\r\n  lineChartLabels: Label[] = [];\r\n\r\n  /**\r\n   * Define chart options\r\n   */\r\n  lineChartOptions: ChartOptions = {\r\n    responsive: true,\r\n    defaultColor: 'white',\r\n    scales: {\r\n      xAxes: [{\r\n        ticks:  {\r\n          display: false\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }],\r\n      yAxes: [{\r\n        ticks:  {\r\n          display: false,\r\n          fontColor: 'white'\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }]\r\n    },\r\n    legend: {\r\n      display: false,\r\n    },\r\n    layout: {\r\n      padding: {\r\n        top:40,\r\n        left:10,\r\n        right: 10,\r\n      }\r\n    }\r\n  };\r\n\r\n  /**\r\n   * Define colors of chart segments\r\n   */\r\n  lineChartColors: Color[] = [\r\n    {\r\n      backgroundColor: '#2f2f2f',\r\n      borderColor: 'white',\r\n    }\r\n  ];\r\n\r\n  /**\r\n   * Set true to show legends\r\n   */\r\n  lineChartLegend = false;\r\n\r\n  /**\r\n   * Define type of chart\r\n   */\r\n  lineChartType: ChartType = 'line';\r\n\r\n  /**\r\n   * Plugins for Chart.\r\n   */\r\n  lineChartPlugins = [];\r\n\r\n  constructor(\r\n    private stockService: StockService,\r\n    private stockAvService: StockAvService\r\n  ) { }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    this.getStock();\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    timer(0,1800000).subscribe(() => this.getStock());\r\n  }\r\n\r\n  /**\r\n   * Return Chartdata for Y axes\r\n   * @param data Array of numbers\r\n   * @returns Chartdata for chart.js\r\n   */\r\n  public getLineChartData(data: number[]) {\r\n    const lineChartData = [\r\n      { data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0 },\r\n    ];\r\n    return lineChartData;\r\n  }\r\n\r\n  /**\r\n   * Calculate the differnce between beginn and end of the stockchart\r\n   * @param prices Array of all prices\r\n   * @returns Relative Difference\r\n   */\r\n  public getRelativeDifference(prices: number[]): number {\r\n    if(!prices.length) {\r\n      return -1000;\r\n    }\r\n    return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;\r\n  }\r\n\r\n  /**\r\n   * Get Stock from Yahoo Api or Mockdata\r\n   */\r\n  private getStock() {\r\n    this.getService()\r\n       .subscribe((result: any) => {\r\n      this.symbolData = [];\r\n      this.symbols.split(',').forEach((symbol: string) => {\r\n        this.symbolData.push(\r\n          {\r\n            name: symbol.slice(0,4),\r\n            currentPrice: result[symbol].chartPreviousClose,\r\n            relativeDifference: this.getRelativeDifference(result[symbol].close),\r\n            prices: this.getLineChartData(result[symbol].close),\r\n            times: (result[symbol].timestamp as number[]).map(time => time.toString()),\r\n            lineChartColors: [\r\n              {\r\n                backgroundColor: '#2f2f2f',\r\n                borderColor: this.getRelativeDifference(result[symbol].close) > 0 ? this.positiveColor : this.negativeColor,\r\n              }\r\n            ]\r\n          });\r\n      })\r\n\r\n    })\r\n  }\r\n\r\n  /**\r\n   * Helping service to choose Mock or Live Data\r\n   * @returns \r\n   */\r\n  private getService(): Observable<Object> {\r\n    return this.mockData\r\n      ? this.stockService.getSparkMock()\r\n      : this.stockService.getSpark(this.symbols, this.interval, this.range)\r\n  }\r\n}\r\n",
+            "sourceCode": "import {Component, Input, OnChanges, OnInit} from '@angular/core';\r\nimport {ChartDataSets, ChartOptions, ChartType} from 'chart.js';\r\nimport {Color, Label} from 'ng2-charts';\r\nimport {StockService} from \"./service/stock.service\";\r\nimport {Observable, timer} from \"rxjs\";\r\nimport {SymbolData} from './interfaces/symbol';\r\n\r\n@Component({\r\n  selector: 'app-stock',\r\n  templateUrl: './stock.component.html',\r\n  styleUrls: ['./stock.component.scss']\r\n})\r\nexport class StockComponent implements OnInit, OnChanges {\r\n\r\n  /**\r\n   * Array of symbol informations for chart.js\r\n   */\r\n  public symbolData: SymbolData[] = [];\r\n\r\n  /**\r\n   * Symbols for stock\r\n   */\r\n  @Input() symbols: string = 'NDAQ'\r\n  /**\r\n   * Interval for Stock\r\n   * Options: 1m 5m 15m 1d 1wk 1mo\r\n   */\r\n  @Input() interval: string = '1d'\r\n\r\n  /**\r\n   * Range of Stock\r\n   * Options: 1d 5d 1mo 3mo 6mo 1y 5y max\r\n   */\r\n  @Input() range: string = '1mo'\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n  @Input() mockData: boolean = false;\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() positiveColor: string = 'green';\r\n\r\n\r\n  /**\r\n   * Mock data for Stock\r\n   * Only Symbols AAPL, MSFT available\r\n   */\r\n   @Input() negativeColor: string = 'red';\r\n\r\n  /**\r\n   * Array of different segments in chart\r\n   */\r\n  lineChartData: ChartDataSets[] = [\r\n    { data: [], label: 'Curse', pointRadius: 0, borderWidth: 0, lineTension: 0 },\r\n  ];\r\n\r\n  /**\r\n   * Labels shown on the x-axis\r\n   */\r\n  lineChartLabels: Label[] = [];\r\n\r\n  /**\r\n   * Define chart options\r\n   */\r\n  lineChartOptions: ChartOptions = {\r\n    responsive: true,\r\n    defaultColor: 'white',\r\n    scales: {\r\n      xAxes: [{\r\n        ticks:  {\r\n          display: false\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }],\r\n      yAxes: [{\r\n        ticks:  {\r\n          display: false,\r\n          fontColor: 'white'\r\n        },\r\n        gridLines: {\r\n          display:false\r\n        }\r\n      }]\r\n    },\r\n    legend: {\r\n      display: false,\r\n    },\r\n    layout: {\r\n      padding: {\r\n        top:40,\r\n        left:10,\r\n        right: 10,\r\n      }\r\n    }\r\n  };\r\n\r\n  /**\r\n   * Define colors of chart segments\r\n   */\r\n  lineChartColors: Color[] = [\r\n    {\r\n      backgroundColor: '#2f2f2f',\r\n      borderColor: 'white',\r\n    }\r\n  ];\r\n\r\n  /**\r\n   * Set true to show legends\r\n   */\r\n  lineChartLegend = false;\r\n\r\n  /**\r\n   * Define type of chart\r\n   */\r\n  lineChartType: ChartType = 'line';\r\n\r\n  /**\r\n   * Plugins for Chart.\r\n   */\r\n  lineChartPlugins = [];\r\n\r\n  constructor(\r\n    private stockService: StockService,\r\n  ) { }\r\n\r\n  ngOnChanges(): void {\r\n    this.getStock();\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    timer(0,1800000).subscribe(() => this.getStock());\r\n  }\r\n\r\n  /**\r\n   * Return Chartdata for Y axes\r\n   * @param data Array of numbers\r\n   * @returns Chartdata for chart.js\r\n   */\r\n  public getLineChartData(data: number[]) {\r\n    return [\r\n      {data: data, label: 'Curse', pointRadius: 0, borderWidth: 3, lineTension: 0},\r\n    ];\r\n  }\r\n\r\n  /**\r\n   * Calculate the differnce between beginn and end of the stockchart\r\n   * @param prices Array of all prices\r\n   * @returns Relative Difference\r\n   */\r\n  public getRelativeDifference(prices: number[]): number {\r\n    if(!prices.length) {\r\n      return -1000;\r\n    }\r\n    return Math.round((prices[prices.length - 1] / prices[0] - 1) * 100 * 100) / 100;\r\n  }\r\n\r\n  /**\r\n   * Get Stock from Yahoo Api or Mockdata\r\n   */\r\n  private getStock() {\r\n    this.getService()\r\n       .subscribe((result: any) => {\r\n      this.symbolData = [];\r\n      this.symbols.split(',').forEach((symbol: string) => {\r\n        this.symbolData.push(\r\n          {\r\n            name: symbol.slice(0,4),\r\n            currentPrice: result[symbol].chartPreviousClose,\r\n            relativeDifference: this.getRelativeDifference(result[symbol].close),\r\n            prices: this.getLineChartData(result[symbol].close),\r\n            times: (result[symbol].timestamp as number[]).map(time => time.toString()),\r\n            lineChartColors: [\r\n              {\r\n                backgroundColor: '#2f2f2f',\r\n                borderColor: this.getRelativeDifference(result[symbol].close) > 0 ? this.positiveColor : this.negativeColor,\r\n              }\r\n            ]\r\n          });\r\n      })\r\n\r\n    })\r\n  }\r\n\r\n  /**\r\n   * Helping service to choose Mock or Live Data\r\n   * @returns\r\n   */\r\n  private getService(): Observable<Object> {\r\n    return this.mockData\r\n      ? this.stockService.getSparkMock()\r\n      : this.stockService.getSpark(this.symbols, this.interval, this.range)\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2044,28 +1775,13 @@
                         "type": "StockService",
                         "deprecated": false,
                         "deprecationMessage": ""
-                    },
-                    {
-                        "name": "stockAvService",
-                        "type": "StockAvService",
-                        "deprecated": false,
-                        "deprecationMessage": ""
                     }
                 ],
-                "line": 128,
+                "line": 127,
                 "jsdoctags": [
                     {
                         "name": "stockService",
                         "type": "StockService",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "stockAvService",
-                        "type": "StockAvService",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -2516,6 +2232,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "dashboard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/widgetmonitor.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2533,7 +2259,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+                "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: '00000'\n}"
             },
             {
                 "name": "environment",
@@ -2543,7 +2269,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+                "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: '00000'\n}"
             },
             {
                 "name": "environmentDefault",
@@ -2556,56 +2282,6 @@
                 "defaultValue": "{\r\n  production: false,\r\n  darkSkyApiKey: '00000',\r\n  yahooApiKey: '00000',\r\n  alphavantageKey: '00000'\r\n}"
             },
             {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "Morning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2616,40 +2292,10 @@
                 "defaultValue": "() => {\r\n  return({\r\n    props: {\r\n      timeIsRunning: false,\r\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\r\n    },\r\n    parameter: {\r\n      time: new Date(2021, 10, 9, 9, 9, 9, 9)\r\n    }\r\n  })\r\n}"
             },
             {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "Running",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/clock.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2679,41 +2325,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/clock.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ClockComponent>",
                 "defaultValue": "(args: ClockComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -2734,6 +2350,16 @@
                 "deprecationMessage": "",
                 "type": "Story<TramComponent>",
                 "defaultValue": "(args: TramComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stops: stops\r\n  },\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/widgetmonitor.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ClockComponent>",
+                "defaultValue": "(args: ClockComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stopDescriptions: [\r\n      {\r\n          id: \"33000044\",\r\n          name: \"Gabelsbergerstr.\"\r\n      },\r\n      {\r\n          id: \"33000062\",\r\n          name: \"Fetscherplatz\"\r\n      }\r\n    ],\r\n    timeOffset: 0,\r\n    latitude: 51.0504088,\r\n    longitude: 13.7372621,\r\n    symbol: \"AAPL,MSFT,AAPL\",\r\n    interval: \"1d\",\r\n    range: \"1mo\",\r\n    mockData: true,\r\n  }\r\n})"
             },
             {
                 "name": "Template",
@@ -2885,6 +2511,28 @@
                     "defaultValue": "(args: StockComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/stories/widgetmonitor.stories.ts": [
+                {
+                    "name": "dashboard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/widgetmonitor.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/widgetmonitor.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ClockComponent>",
+                    "defaultValue": "(args: ClockComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stopDescriptions: [\r\n      {\r\n          id: \"33000044\",\r\n          name: \"Gabelsbergerstr.\"\r\n      },\r\n      {\r\n          id: \"33000062\",\r\n          name: \"Fetscherplatz\"\r\n      }\r\n    ],\r\n    timeOffset: 0,\r\n    latitude: 51.0504088,\r\n    longitude: 13.7372621,\r\n    symbol: \"AAPL,MSFT,AAPL\",\r\n    interval: \"1d\",\r\n    range: \"1mo\",\r\n    mockData: true,\r\n  }\r\n})"
+                }
+            ],
             "src/environments/environment.default.prod.ts": [
                 {
                     "name": "environment",
@@ -2906,7 +2554,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+                    "defaultValue": "{\n  production: true,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: '00000'\n}"
                 }
             ],
             "src/environments/environment.ts": [
@@ -2918,7 +2566,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: 'J962LWHHHM25D2I1'\n}"
+                    "defaultValue": "{\n  production: false,\n  darkSkyApiKey: 'd086c712caa4f43bb1e947dd4012931d',\n  yahooApiKey: 'WSGPhTUfb55I16HQMp2Zh3Mi31qKpJQbamxz0RM3',\n  alphavantageKey: '00000'\n}"
                 }
             ],
             "src/environments/environment.default.ts": [
@@ -2931,122 +2579,6 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false,\r\n  darkSkyApiKey: '00000',\r\n  yahooApiKey: '00000',\r\n  alphavantageKey: '00000'\r\n}"
-                }
-            ],
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/traum.stories.ts": [
@@ -3132,7 +2664,7 @@
         ]
     },
     "coverage": {
-        "count": 4,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -3149,8 +2681,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
-                "coveragePercent": 12,
-                "coverageCount": "2/16",
+                "coveragePercent": 11,
+                "coverageCount": "2/17",
                 "status": "low"
             },
             {
@@ -3330,125 +2862,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
                 "filePath": "src/stories/clock.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -3486,24 +2899,6 @@
                 "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -3578,6 +2973,26 @@
             },
             {
                 "filePath": "src/stories/weather.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/widgetmonitor.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "dashboard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/widgetmonitor.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
