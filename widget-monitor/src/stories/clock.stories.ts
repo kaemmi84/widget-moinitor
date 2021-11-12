@@ -4,7 +4,7 @@ import {ClockComponent} from "../app/widgets/clock/clock.component";
 export default {
   title: 'WidgetMonitor/Clock',
   component: ClockComponent,
-  timeIsRunning: false
+  timeIsRunning: false,
 } as Meta;
 
 export const Morning = () => {
@@ -29,11 +29,15 @@ export const Afternoon = () => {
 }
 
 const Template: Story<ClockComponent> = (args: ClockComponent) => ({
-  props: args,
+  props: args
 });
 
 export const Running = Template.bind({});
 
 Running.args = {
   timeIsRunning: true,
+};
+
+Running.parameters = {
+  storyshots: { disable: true }
 };

@@ -14,7 +14,7 @@
   },
   "jest": {
     "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": ["<rootDir>/src/setupJest.ts"],
+    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"],
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!(@storybook/addon-docs))"
     ],
