@@ -18,6 +18,13 @@ export const Morning = () => {
     }
   })
 }
+// Morning.parameters = {
+//   async puppeteerTest(page) {
+//     const element = await page.$('<some-selector>');
+//     await element.click();
+//     expect(something).toBe(something);
+//   },
+// };
 
 export const Afternoon = () => {
   return({
