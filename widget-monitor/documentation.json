@@ -2296,6 +2296,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/clock.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ClockComponent>",
+                "defaultValue": "(args: ClockComponent) => ({\r\n  props: args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/stock.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2306,11 +2316,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/clock.stories.ts",
+                "file": "src/stories/widgetmonitor.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ClockComponent>",
-                "defaultValue": "(args: ClockComponent) => ({\r\n  props: args\r\n})"
+                "defaultValue": "(args: ClockComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stopDescriptions: [\r\n      {\r\n          id: \"33000044\",\r\n          name: \"Gabelsbergerstr.\"\r\n      },\r\n      {\r\n          id: \"33000062\",\r\n          name: \"Fetscherplatz\"\r\n      }\r\n    ],\r\n    timeOffset: 0,\r\n    latitude: 51.0504088,\r\n    longitude: 13.7372621,\r\n    symbol: \"AAPL,MSFT,AAPL\",\r\n    interval: \"1d\",\r\n    range: \"1mo\",\r\n    mockData: true,\r\n  }\r\n})"
             },
             {
                 "name": "Template",
@@ -2331,16 +2341,6 @@
                 "deprecationMessage": "",
                 "type": "Story<TramComponent>",
                 "defaultValue": "(args: TramComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stops: stops\r\n  },\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/widgetmonitor.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ClockComponent>",
-                "defaultValue": "(args: ClockComponent) => ({\r\n  props: {\r\n    ...args,\r\n    stopDescriptions: [\r\n      {\r\n          id: \"33000044\",\r\n          name: \"Gabelsbergerstr.\"\r\n      },\r\n      {\r\n          id: \"33000062\",\r\n          name: \"Fetscherplatz\"\r\n      }\r\n    ],\r\n    timeOffset: 0,\r\n    latitude: 51.0504088,\r\n    longitude: 13.7372621,\r\n    symbol: \"AAPL,MSFT,AAPL\",\r\n    interval: \"1d\",\r\n    range: \"1mo\",\r\n    mockData: true,\r\n  }\r\n})"
             },
             {
                 "name": "Tram",
